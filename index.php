@@ -5,28 +5,38 @@
   <title>Swiper Slider - PHP Version</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="<?php echo '../css/index.css'; ?>">
+  <link rel="stylesheet" href="../css/index.css"> <!-- Local CSS in same folder -->
   <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+  <style>
+    /* Optional fallback style if JS fails */
+    .slide-bg-image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
 
-<!-- start of hero -->
+<!-- Start of Hero Slider -->
 <section class="hero-slider hero-style">
   <div class="swiper-container">
     <div class="swiper-wrapper">
       
       <?php
-        // Define an array of slides
+        // Define slide data (local images are in same folder as this index.php)
         $slides = [
           [
-            "background" => "https://images.unsplash.com/photo-1578934191836-ff5f608c2228?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80",
+            "background" => "background.jpeg",  // Local image
             "title" => "GUITAR CLASSES<br>FOR KIDS",
             "text" => "Want to see your kid become more expressive?"
           ],
           [
-            "background" => "https://images.unsplash.com/photo-1579003087287-997fd4d18771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-            "title" => "GUITAR CLASSES<br>FOR KIDS",
-            "text" => "Want to see your kid become more expressive?"
+            "background" => "slide2.jpg", // Another local image
+            "title" => "GUITAR CLASSES<br>FOR TEENS",
+            "text" => "Music helps your child grow smarter!"
           ]
         ];
 
@@ -52,17 +62,45 @@
       <?php } ?>
     </div>
 
-    <!-- swiper controls -->
+    <!-- Swiper Navigation Controls -->
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
 </section>
 
-<!-- scripts -->
+<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="<?php echo '../javascript/contact.js'; ?>"></script>
+
+<script>
+  // Set background images from data-background attribute
+  document.querySelectorAll(".slide-bg-image").forEach(function(el) {
+    const bg = el.getAttribute("data-background");
+    if (bg) {
+      el.style.backgroundImage = "url('" + bg + "')";
+    }
+  });
+
+  // Initialize Swiper
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
+    },
+    speed: 1000,
+    parallax: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+</script>
 
 </body>
 </html>
