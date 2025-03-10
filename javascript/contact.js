@@ -43,6 +43,33 @@
             submitBtn.disabled = false;
         }, 3000);
     }, 1500);
+    function showPopup(message) {
+        document.getElementById('popup-text').innerHTML = message;
+        document.getElementById('popup-message').style.display = "block";
+    }
+
+    function closePopup() {
+        document.getElementById('popup-message').style.display = "none";
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        let formData = new FormData(this);
+
+        fetch("send_email.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            showPopup(data); // Show success/error message in popup
+            document.getElementById("contactForm").reset(); // Reset form after submission
+        })
+        .catch(error => {
+            showPopup("An error occurred. Please try again.");
+        });
+    });
     
     // In a real application, the PHP code would handle the form submission
     // Example of how you would process this in PHP:
@@ -87,3 +114,5 @@ function showNotification(message, type) {
         notification.style.display = 'none';
     }, 5000);
 }
+
+

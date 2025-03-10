@@ -26,7 +26,7 @@
                 <div class="form-body">
                     <div class="notification" id="notification"></div>
                     
-                    <form id="contactForm">
+                    <form id="contactForm" action="send_email.php" method="post">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -65,6 +65,11 @@
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
+                        <div id="popup-message" class="popup">
+        <span id="popup-text"></span>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
                 </div>
             </div>
             
