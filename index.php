@@ -31,13 +31,18 @@
         $slides = [
           [
             "background" => "background.jpeg",  // Local image
-            "title" => "GUITAR CLASSES<br>FOR KIDS",
-            "text" => "Want to see your kid become more expressive?"
+            "title" => "METICULIS",
+            "text" => "Deligent minds driving sustainable growth"
           ],
           [
             "background" => "slide2.jpg", // Another local image
-            "title" => "GUITAR CLASSES<br>FOR TEENS",
-            "text" => "Music helps your child grow smarter!"
+            "title" => "METICULIS",
+            "text" => "Deligent minds driving sustainable growth"
+          ],
+          [
+            "background" => "slide2.jpg", // Another local image
+            "title" => "METICULIS",
+            "text" => "Deligent minds driving sustainable growth"
           ]
         ];
 
@@ -54,7 +59,7 @@
             </div>
             <div class="clearfix"></div>
             <div data-swiper-parallax="500" class="slide-btns">
-              <a href="#" class="theme-btn-s2">Register now</a>
+              <a href="#" class="theme-btn-s2">Contact now</a>
               <a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
             </div>
           </div>

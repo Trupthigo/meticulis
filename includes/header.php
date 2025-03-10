@@ -26,7 +26,7 @@ function isActive($pageName) {
                     <path d="M2 17L12 22L22 17" stroke="#4f46e5" stroke-width="2"/>
                     <path d="M2 12L12 17L22 12" stroke="#4f46e5" stroke-width="2"/>
                 </svg>
-                <span class="logo-text">YourBrand</span>
+                <span class="logo-text">METICULIS</span>
             </a>
             
             <nav class="nav">

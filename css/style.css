@@ -77,7 +77,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #4f46e5;
+    background-color:#ffd700;
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
