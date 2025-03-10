@@ -52,24 +52,7 @@ body::after {
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    margin-bottom: 60px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--gold-primary);
-    text-decoration: none;
+    padding: 0px 20px;
 }
 
 /* Main content */
