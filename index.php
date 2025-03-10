@@ -109,6 +109,7 @@
 </script>
 
 <?php include 'aboutus.php'; ?>
+<?php include 'slider.php'; ?>
 
 
 </body>
