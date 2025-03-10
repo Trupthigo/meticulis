@@ -39,11 +39,11 @@
         <div class="container">
             <div class="story-content">
                 <div class="story-text animate-fade-in" data-delay="200">
-                    <h2>OUR STORY</h2>
+                    <h2>ABOUT US</h2>
                     <p>With over 20 years of experience in software development across diverse industries, we have experience building high-performing teams that deliver quality software at speed. We carry that same mentality into Meticulis; we are passionate about hiring the right people—those whose values and attitudes align with ours and drive the same success to our clients.</p>
                 </div>
                 <div class="story-image animate-fade-in" data-delay="400">
-                    <img src="team-image.jpg" alt="Meticulis team collaborating">
+                    <img src="background.jpeg" alt="Meticulis team collaborating">
                 </div>
             </div>
         </div>
