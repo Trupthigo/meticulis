@@ -10,7 +10,7 @@
   <title>Apple Fun Facts Slider</title>
   <style>
     .slider__wrapper {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       overflow: hidden;
     }
