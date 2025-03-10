@@ -1,12 +1,12 @@
 /* Footer styles */
 .footer-section {
-    background-color: #1e2124;
+    background-color: #000000;
     color: #d6d9db;
     position: relative;
     overflow: hidden;
 }
 
-.footer-shape {
+/* .footer-shape {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
     height: 10px;
     background: linear-gradient(90deg, transparent, #f5d742, transparent);
     opacity: 0.4;
-}
+} */
 
 .footer-top {
     padding: 70px 0 40px;

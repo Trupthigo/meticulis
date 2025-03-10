@@ -20,7 +20,7 @@
         
         /* Header Styles */
         .header {
-            background-color: #1e1e1e;
+            background-color: #000000;
             padding: 20px 40px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
             position: fixed;

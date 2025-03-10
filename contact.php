@@ -136,5 +136,7 @@
         </div>
     </div>
     <script src="contact.js"></script>
+    
+<?php include 'includes/footer.php'; ?>
 </body>
 </html>
