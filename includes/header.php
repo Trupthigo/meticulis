@@ -40,16 +40,21 @@
         }
         
         .logo {
-        font-size: 2px; /* Reduced from 24px to 12px */
-        font-weight: bold;
-        color: #ffffff;
-        text-decoration: none;
-    }
+            font-size: 32px; /* Increased from 2px to 32px */
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Adds some spacing between text and image */
+        }
+
         .logo img {
-        height: 50px; /* Adjust size as needed */
-        width: auto;
-        display: block;
-    }
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
 
 
         

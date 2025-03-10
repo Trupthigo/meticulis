@@ -12,7 +12,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color:rgb(29, 29, 29);
+      background-color:rgb(19, 19, 19);
     }
 
     .slider__wrapper {
