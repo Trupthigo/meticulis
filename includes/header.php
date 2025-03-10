@@ -192,7 +192,7 @@
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
-            <a href="index.php" class="logo">METICULIS<img src="../logo.jpg" alt="Meticulis"></a>
+            <a href="index.php" class="logo"><img src="../logo.jpg" alt="Meticulis">METICULIS</a>
 
                 
                 <div class="hamburger">
