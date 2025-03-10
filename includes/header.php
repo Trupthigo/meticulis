@@ -1,5 +1,13 @@
 <?php
 // header.php - Include this file at the top of your pages
+// Get current page name
+$current_page = basename($_SERVER['PHP_SELF']);
+
+// Function to check if link is active
+function isActive($pageName) {
+    global $current_page;
+    return $current_page === $pageName ? 'active' : '';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link external CSS -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- Link external CSS -->
 </head>
 <body>
     <header class="header">
