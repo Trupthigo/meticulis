@@ -108,6 +108,8 @@
   });
 </script>
 
+<?php include 'aboutus.php'; ?>
+
 
 </body>
 </html>
