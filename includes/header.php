@@ -180,7 +180,10 @@
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.php" class="logo">METICULIS</a>
+            <a href="index.php" class="logo">
+    <img src="your-logo.png" alt="Meticulis Logo">
+</a>
+
                 
                 <div class="hamburger">
                     <span></span>
