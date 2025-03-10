@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Themed Header</title>
+    <title>Meticulis</title>
     <style>
         /* Reset and Base Styles */
         * {
@@ -23,8 +23,9 @@
             background-color: #1e1e1e;
             padding: 20px 40px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            position: relative;
+            position: fixed;
             z-index: 100;
+            width: 100%;
         }
         
         .container {
@@ -179,7 +180,7 @@
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="index.php" class="logo">Your Logo</a>
+                <a href="index.php" class="logo">METICULIS</a>
                 
                 <div class="hamburger">
                     <span></span>
