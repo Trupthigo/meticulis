@@ -40,11 +40,12 @@
         }
         
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffffff; /* Purple accent color */
-            text-decoration: none;
-        }
+        font-size: 2px; /* Reduced from 24px to 12px */
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
         
         /* Navigation Menu */
         .nav-menu {
@@ -181,7 +182,7 @@
         <div class="container">
             <div class="nav-wrapper">
             <a href="index.php" class="logo">
-    <img src="your-logo.png" alt="Meticulis Logo">
+    <img src="../logo.jpg" alt="Meticulis">
 </a>
 
                 
