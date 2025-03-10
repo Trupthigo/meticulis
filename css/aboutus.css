@@ -30,7 +30,11 @@ body {
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 2px;
-    animation: fadeInDown 1.2s ease-out;
+}
+
+/* Slide-in animation for main title */
+.main-title.animate-slide-left-to-right {
+    animation: slideLeftToRight 1.5s ease-out forwards;
 }
 
 /* Stats section */
@@ -96,7 +100,7 @@ body {
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
-    color: #f5d742; /* Yellow color from image */
+    color: #f5d742;
     margin-bottom: 15px;
     text-shadow: 0 0 10px rgba(245, 215, 66, 0.5);
 }
@@ -142,7 +146,7 @@ body {
 .story-text h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #d6d9db; /* Light gray color */
+    color: #d6d9db;
     position: relative;
     padding-bottom: 15px;
 }
@@ -215,18 +219,6 @@ body {
     }
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 @keyframes shimmer {
     0% {
         transform: translateX(-100%);
@@ -245,6 +237,32 @@ body {
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideLeftToRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .animate-fade-in {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
@@ -256,6 +274,10 @@ body {
     animation: slideUp 0.8s ease forwards;
 }
 
+.animate-slide-left-to-right {
+    animation: slideLeftToRight 1.5s ease-out forwards;
+}
+
 .animate-pulse {
     animation: pulse 2s infinite;
 }
@@ -265,19 +287,20 @@ body {
     .main-title {
         font-size: 2.2rem;
     }
-    
+
     .stat-number {
         font-size: 2.5rem;
     }
-    
+
     .story-content {
         flex-direction: column;
     }
-    
-    .story-text, .story-image {
+
+    .story-text,
+    .story-image {
         width: 100%;
     }
-    
+
     .story-text h2 {
         font-size: 2rem;
     }
@@ -287,30 +310,29 @@ body {
     .main-title {
         font-size: 1.8rem;
     }
-    
+
     .hero-section {
         padding: 50px 0;
     }
-    
+
     .stat-box {
         min-width: 100%;
     }
-    
+
     .story-text h2 {
         font-size: 1.8rem;
     }
 }
 
-/* For very small screens */
 @media (max-width: 320px) {
     .container {
         padding: 0 10px;
     }
-    
+
     .main-title {
         font-size: 1.5rem;
     }
-    
+
     .stat-number {
         font-size: 1.8rem;
     }
