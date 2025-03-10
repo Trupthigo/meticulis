@@ -110,6 +110,7 @@
 
 <?php include 'aboutus.php'; ?>
 <?php include 'slider.php'; ?>
+<?php include 'includes/footer.php'; ?>
 
 
 </body>

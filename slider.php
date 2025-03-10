@@ -101,6 +101,8 @@
       ],
     ];
 
+
+
     // Loop through each fact and render HTML
     foreach ($apple_facts as $fact) {
       echo '
