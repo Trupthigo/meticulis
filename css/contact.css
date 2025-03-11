@@ -18,7 +18,6 @@
     --error: #f44336;
 }
 
-
 body {
     background-color: var(--bg-primary);
     color: var(--text-light);
@@ -181,39 +180,27 @@ body::after {
     gap: 20px;
 }
 /* Popup Styles */
-.popup-message {
+.popup {
+    display: none;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222;
+    color: #fff;
+    padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
     z-index: 1000;
-    animation: slide-in 0.5s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.success {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.error {
-    background-color: #f44336;
-    color: white;
-}
-
-.fade-out {
-    animation: fade-out 1s;
-}
-
-@keyframes slide-in {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes fade-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
+.popup button {
+    margin-top: 10px;
+    background: #ffd700;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
 
