@@ -279,6 +279,12 @@ body::after {
     align-items: flex-start;
     gap: 15px;
 }
+.fas.fa-phone-alt,
+.fas.fa-map-marker-alt,
+.fas.fa-envelope,
+.fas.fa-clock{
+    margin: 8px 5px 8px 8px
+}
 
 .info-icon {
     display: flex;
@@ -306,6 +312,12 @@ body::after {
 }
 
 /* Social media section */
+.fab.fa-instagram,
+.fab.fa-facebook,
+.fab.fa-twitter,
+.fab.fa-linkedin{
+    margin: 5px 5px 5px 7px;
+}
 .social-section {
     margin-top: 10px;
 }
@@ -320,20 +332,20 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: var(--bg-primary);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    border-radius: 8px;
+    border-radius: 50%;
     color: var(--gold-primary);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    background-color: var(--gold-primary);
-    color: var(--bg-primary);
-    transform: translateY(-3px);
+    background-color: #1e2124;
+    color: #1e2124;
+    transform: translateY(-3px); 
 }
 
 /* Map section */

@@ -10,7 +10,7 @@
 <body>
     <header class="hero-section">
         <div class="container">
-            <h1 class="main-title animate-slide-left-to-right">WHY METICULIS</h1>
+            <h1 class="main-title animate-slide-left-to-right">WHY METICULIS?!!</h1>
         </div>
     </header>
 

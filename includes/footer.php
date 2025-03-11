@@ -24,10 +24,10 @@
                 <div class="footer-column footer-links">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-menu">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="services.php">Services</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
                 
