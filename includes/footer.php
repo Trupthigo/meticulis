@@ -40,18 +40,17 @@
                 <div class="footer-column footer-services">
                     <h3 class="footer-heading">Our Services</h3>
                     <ul class="footer-menu">
-                        <li><a href="#">Skilled Techical Resources</a></li>
-                        <li><a href="#">Project Management</a></li>
-                        <li><a href="#">Software Development</a></li>
+                        <li><a href="services.php#skilled-resources">Skilled Technical Resources</a></li>
+                        <li><a href="services.php#project-management">Project Management</a></li>
+                        <li><a href="services.php#software-development">Software Development</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column footer-contact">
                     <h3 class="footer-heading">Contact Us</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Innovation City</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@meticulis.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps?q=24+Austin+House,+King+Street,+Norwich,+NR1+1FW,+United+Kingdom" style="color: inherit; text-decoration: none;"> 24 Austin House,King Street,Norwich,NR11FW,United Kingdom </li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">admin@meticulis.co.uk</li>
                     </ul>
                     <div class="footer-subscribe">
                         <!-- <h4>Subscribe to our newsletter</h4> -->

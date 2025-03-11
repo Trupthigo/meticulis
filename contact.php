@@ -85,19 +85,13 @@
                             </div>
                             <div class="info-content">
                                 <h3>Our Location</h3>
-                                <p>123 Business Avenue, Suite 200<br>New York, NY 10001</p>
+                                <p>
+                                    <a href="https://maps.app.goo.gl/LhyRU53XNSQQ1jxM9" target="_blank" style="color: inherit; text-decoration: none;">
+                                    24 Austin House, King Street, Norwich<br>United Kingdom, NR11FW
+                                </p>
                             </div>
                         </div>
                         
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Call Us</h3>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
                         
                         <div class="info-item">
                             <div class="info-icon">
@@ -105,7 +99,7 @@
                             </div>
                             <div class="info-content">
                                 <h3>Email Us</h3>
-                                <p>info@yourcompany.com</p>
+                                <p><a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">admin@meticulis.co.uk</p>
                             </div>
                         </div>
                         
@@ -115,7 +109,7 @@
                             </div>
                             <div class="info-content">
                                 <h3>Business Hours</h3>
-                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
                             </div>
                         </div>
                     </div>
@@ -125,19 +119,29 @@
                     <h2 class="section-title">Connect With Us</h2>
                     
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/meticulis" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/meticulisltd" class="social-link" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/meticulisltd/" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
+
                 </div>
             </div>
             
             <!-- Full width map section -->
             <div class="map-section">
                 <h2 class="map-title">Find Us</h2>
-                <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.746318586604!2d-74.00580018696228!3d40.7112564864201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a165bedccab%3A0x2cb2ddf003b5ae01!2sWall%20Street%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1646999089612!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="map-container"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9686.816886520059!2d1.2881289721715994!3d52.62918895880931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d9e3906320296f%3A0xa8c6afe3666be6a5!2sAustin%20House!5e0!3m2!1sen!2sin!4v1741680206918!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
+
         </div>
     </div>
     <script src="contact.js"></script>

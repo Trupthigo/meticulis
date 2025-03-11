@@ -306,6 +306,10 @@ a {
   text-transform: uppercase;
 }
 
+.theme-btn-s3:hover {
+  color: #1d1d1d;
+}
+
 i.fa-chevron-circle-right {
   height: 22px;
   width: 22px;

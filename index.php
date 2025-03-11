@@ -59,8 +59,8 @@
             </div>
             <div class="clearfix"></div>
             <div data-swiper-parallax="500" class="slide-btns">
-              <a href="#" class="theme-btn-s2">Contact now</a>
-              <a href="#" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
+              <a href="contact.php" class="theme-btn-s2">Contact now</a>
+              <a href="services.php" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
             </div>
           </div>
         </div>

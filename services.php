@@ -20,58 +20,64 @@
     <!-- Services Grid -->
     <div class="services-grid">
       <!-- Skilled Technical Resources -->
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-users-cog"></i>
-        </div>
-        <div class="service-content">
-          <h2 class="service-title">Skilled Technical Resources</h2>
-          <p class="service-description">Our experienced IT professionals seamlessly integrate with your team to enhance productivity and deliver exceptional results.</p>
-          <div class="service-features">
-            <div class="feature-item">
-              <i class="fas fa-check-circle feature-icon"></i>
-              <p class="feature-text">Expert developers in multiple technologies</p>
+      <div class="service-card" id="skilled-resources"> 
+        <div class="service-card">
+            <div class="service-icon">
+            <i class="fas fa-users-cog"></i>
             </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle feature-icon"></i>
-              <p class="feature-text">Flexible resource allocation</p>
+            <div class="service-content">
+            <h2 class="service-title">Skilled Technical Resources</h2>
+            <p class="service-description">Our experienced IT professionals seamlessly integrate with your team to enhance productivity and deliver exceptional results.</p>
+            <div class="service-features">
+                <div class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <p class="feature-text">Expert developers in multiple technologies</p>
+                </div>
+                <div class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <p class="feature-text">Flexible resource allocation</p>
+                </div>
+                <div class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <p class="feature-text">Skilled system administrators and architects</p>
+                </div>
             </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle feature-icon"></i>
-              <p class="feature-text">Skilled system administrators and architects</p>
+            <a href="#" class="service-btn">Learn More</a>
             </div>
-          </div>
-          <a href="#" class="service-btn">Learn More</a>
         </div>
       </div>
 
       <!-- Project Management -->
-      <div class="service-card">
-        <div class="service-icon">
-          <i class="fas fa-tasks"></i>
+        <div class="service-card" id="project-management">
+        <div class="service-card">
+            <div class="service-icon">
+            <i class="fas fa-tasks"></i>
+            </div>
+            <div class="service-content">
+            <h2 class="service-title">Project Management</h2>
+            <p class="service-description">End-to-end project management services to ensure timely delivery and successful outcomes for your business initiatives.</p>
+            <div class="service-features">
+                <div class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <p class="feature-text">Agile and traditional methodologies</p>
+                </div>
+                <div class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <p class="feature-text">Clear communication and reporting</p>
+                </div>
+                <div class="feature-item">
+                <i class="fas fa-check-circle feature-icon"></i>
+                <p class="feature-text">Risk management and mitigation</p>
+                </div>
+            </div>
+            <a href="#" class="service-btn">Learn More</a>
+            </div>
         </div>
-        <div class="service-content">
-          <h2 class="service-title">Project Management</h2>
-          <p class="service-description">End-to-end project management services to ensure timely delivery and successful outcomes for your business initiatives.</p>
-          <div class="service-features">
-            <div class="feature-item">
-              <i class="fas fa-check-circle feature-icon"></i>
-              <p class="feature-text">Agile and traditional methodologies</p>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle feature-icon"></i>
-              <p class="feature-text">Clear communication and reporting</p>
-            </div>
-            <div class="feature-item">
-              <i class="fas fa-check-circle feature-icon"></i>
-              <p class="feature-text">Risk management and mitigation</p>
-            </div>
-          </div>
-          <a href="#" class="service-btn">Learn More</a>
-        </div>
-      </div>
+        </div>  
+    
 
       <!-- Software Development -->
+      <div class="service-card" id="software-development">
       <div class="service-card">
         <div class="service-icon">
           <i class="fas fa-code"></i>
@@ -95,6 +101,7 @@
           </div>
           <a href="#" class="service-btn">Learn More</a>
         </div>
+      </div>
       </div>
     </div>
 
@@ -129,7 +136,7 @@
     <div class="cta-section">
       <h2 class="cta-title">Ready to Transform Your Business?</h2>
       <p class="cta-description">Contact us today to discuss how our services can help you achieve your business goals and stay ahead of the competition.</p>
-      <a href="#" class="cta-btn">Get Started</a>
+      <a href="contact.php" class="cta-btn">Get Started</a>
     </div>
   </div>
   <script src="services.js"></script>
