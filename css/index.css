@@ -307,7 +307,10 @@ a {
 }
 
 .theme-btn-s3:hover {
-  color: #ffd700;
+  color: #000000;
+  opacity: 50%;
+  background-color: #ffffff;
+  padding: 10px 10px;
 }
 
 i.fa-chevron-circle-right {

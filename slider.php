@@ -136,7 +136,7 @@
     .slider__indicators {
       display: flex;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 60px;
       gap: 8px;
     }
     
