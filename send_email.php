@@ -1,12 +1,11 @@
 <?php
+header('Content-Type: text/plain'); // Ensure plain text response
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Load PHPMailer
-require 'vendor/autoload.php'; // If installed via Composer
-// require 'PHPMailer/src/PHPMailer.php'; // If manually installed
-// require 'PHPMailer/src/Exception.php';
-// require 'PHPMailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form inputs
@@ -22,16 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // SMTP Configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // SMTP server (e.g., Gmail, Outlook, Yahoo)
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'mstrupthi@gmail.com'; // Your email
-        $mail->Password = 'zdvy lkog rhpw tjiv'; // Your email password or app password
+        $mail->Username = 'mstrupthi@gmail.com';
+        $mail->Password = 'zdvy lkog rhpw tjiv';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587; // 465 for SSL, 587 for TLS
+        $mail->Port = 587;
 
         // Sender and Recipient
         $mail->setFrom($email, $name);
-        $mail->addAddress('mstrupthi@gmail.com', 'Trupthi'); 
+        $mail->addAddress('mstrupthi@gmail.com', 'Trupthi');
 
         // Email Content
         $mail->isHTML(true);
@@ -45,16 +44,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>Message:</strong> $message</p>
         ";
 
-        // Send Email
+        // Send Email and return only a simple text response
         if ($mail->send()) {
             echo 'Message sent successfully!';
+            exit;
         } else {
             echo 'Error sending message.';
+            exit;
         }
     } catch (Exception $e) {
-        echo "Error: {$mail->ErrorInfo}";
+        echo "Error: " . $mail->ErrorInfo;
+        exit;
     }
 } else {
     echo "Invalid Request!";
+    exit;
 }
 ?>

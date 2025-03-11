@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/contact.css"> <!-- Local CSS in same folder -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <?php echo $alertMessage; // Output alert message if set ?>
     <div class="container">
         <!-- <header>
             <a href="index.html" class="logo">Contact US</a>
@@ -26,7 +28,7 @@
                 <div class="form-body">
                     <div class="notification" id="notification"></div>
                     
-                    <form id="contactForm" action="send_email.php" method="post">
+                    <form id="contactForm" action="send_email.php" method="post" onsubmit="return false;">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -61,7 +63,7 @@
                             <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
                         </div>
                         
-                        <button type="submit" class="submit-btn">
+                        <button type="button" id="submitBtn" class="submit-btn">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
