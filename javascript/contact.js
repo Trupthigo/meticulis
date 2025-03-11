@@ -1,5 +1,5 @@
 // Form submission handler
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+ document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     // Get form data
@@ -115,3 +115,53 @@ function showNotification(message, type) {
     }, 5000);
 }
 
+// Animation enhancement script - add this to your existing contact.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    // Function to handle scroll animations for map section
+    function handleScrollAnimations() {
+        const mapSection = document.querySelector('.map-section');
+        
+        if (isInViewport(mapSection) && !mapSection.classList.contains('animated')) {
+            mapSection.style.opacity = '1';
+            mapSection.classList.add('animated');
+        }
+    }
+
+    // Add scroll event listener for map section animation
+    window.addEventListener('scroll', handleScrollAnimations);
+    
+    // Initial check for elements in viewport
+    handleScrollAnimations();
+    
+    // Subtle animation for form fields when focused
+    const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+    
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.style.transition = 'all 0.3s ease';
+            this.parentElement.style.transition = 'all 0.3s ease';
+            this.parentElement.style.transform = 'translateX(5px)';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'translateX(0)';
+        });
+    });
+    
+    // Add animation to social links
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach((link, index) => {
+        link.style.animationDelay = (0.7 + (index * 0.1)) + 's';
+        link.style.opacity = '0';
+        link.style.animation = 'fadeIn 0.5s ease-out forwards';
+    });
+});
