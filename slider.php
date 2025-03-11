@@ -13,8 +13,9 @@
 
     /* Enhanced Slider Styles */
     .slider__wrapper {
-      max-width: 1200px;
-      margin: 50px auto;
+      max-width: 1300px;
+      width: 100%;
+      margin: 30px auto;
       position: relative;
       overflow: hidden;
       padding: 30px 0;
@@ -23,18 +24,19 @@
     .slider {
       display: flex;
       transition: transform 0.5s ease;
-      margin-left: 60px;
-      margin-right: 60px;
+      padding: 0 60px;
+      box-sizing: border-box;
     }
 
     .slider__content {
-      flex: 0 0 300px;
+      flex: 0 0 calc(100% - 40px);
+      max-width: 1000px;
       margin-right: 20px;
       background: #323131;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       padding: 20px;
-      min-height: 400px;
+      min-height: 360px;
       color: #fff;
       transition: all 0.4s ease;
       transform-origin: center;
@@ -43,15 +45,15 @@
     }
 
     .slider__content:hover {
-      transform: translateY(-8px);
+      transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
     
     .slider__content.active {
-      transform: scale(1.08);
+      transform: scale(1.05);
       z-index: 10;
       background: #3a3939;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.4), 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4), 
                   0 0 15px rgba(255, 215, 0, 0.2);
     }
     
@@ -60,7 +62,7 @@
     }
 
     .slider__text span {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
       color: #ffd700;
       display: block;
@@ -69,12 +71,12 @@
 
     .slider__text h3 {
       margin: 10px 0 15px;
-      font-size: 22px;
+      font-size: 20px;
       color: #fff;
     }
 
     .slider__text p {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.5;
     }
 
@@ -89,7 +91,7 @@
       width: 100%;
       border-radius: 10px;
       transition: transform 0.5s ease;
-      height: 180px;
+      height: 160px;
       object-fit: cover;
     }
     
@@ -106,9 +108,9 @@
       background-color: rgba(255, 215, 0, 0.2);
       border: none;
       color: #fff;
-      font-size: 30px;
-      height: 50px;
-      width: 50px;
+      font-size: 24px;
+      height: 40px;
+      width: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -120,7 +122,6 @@
 
     .arrow:hover {
       background-color: rgba(255, 215, 0, 0.4);
-      transform: translateY(-50%) scale(1.1);
     }
 
     .arrow-left {
@@ -140,8 +141,8 @@
     }
     
     .slider__indicator {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
       cursor: pointer;
@@ -150,27 +151,94 @@
     
     .slider__indicator.active {
       background-color: #ffd700;
-      width: 25px;
+      width: 20px;
       border-radius: 10px;
     }
 
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
+    /* Responsive Styles */
+    /* Mobile (320px minimum) */
+    @media (min-width: 320px) and (max-width: 575px) {
+      .slider__wrapper {
+        padding: 20px 0;
+      }
+      
+      .slider {
+        padding: 0 40px;
+      }
+      
       .slider__content {
-        flex: 0 0 260px;
-        min-height: 380px;
+        flex: 0 0 calc(100% - 20px);
+        min-height: 320px;
+        padding: 15px;
+        margin-right: 10px;
+      }
+      
+      .slider__text span {
+        font-size: 24px;
+      }
+      
+      .slider__text h3 {
+        font-size: 18px;
+        margin: 8px 0 10px;
+      }
+      
+      .slider__text p {
+        font-size: 14px;
+      }
+      
+      .slider__image img {
+        height: 130px;
+      }
+      
+      .arrow {
+        font-size: 20px;
+        height: 35px;
+        width: 35px;
+      }
+      
+      .slider__indicator {
+        width: 6px;
+        height: 6px;
+      }
+      
+      .slider__indicator.active {
+        width: 15px;
       }
       
       .slider__content.active {
-        transform: scale(1.05);
+        transform: scale(1.03);
       }
     }
     
-    @media (max-width: 500px) {
-      .arrow {
-        font-size: 24px;
-        height: 40px;
-        width: 40px;
+    /* Tablet */
+    @media (min-width: 576px) and (max-width: 991px) {
+      .slider__wrapper {
+        max-width: 800px;
+      }
+      
+      .slider__content {
+        flex: 0 0 calc(50% - 30px);
+        max-width: 250px;
+      }
+    }
+    
+    /* Desktop */
+    @media (min-width: 992px) {
+      .slider__content {
+        flex: 0 0 calc(33.333% - 40px);
+        max-width: 300px;
+      }
+      
+      .slider__content.active {
+        transform: scale(1.08);
+      }
+    }
+    
+    /* Large Desktop */
+    @media (min-width: 1200px) {
+      .slider__content {
+        flex: 0 0 calc(25% - 40px);
+        max-width: 300px;
       }
     }
   </style>
@@ -251,11 +319,26 @@
     
     let currentIndex = 0;
     let autoScrollInterval;
-    const slideWidth = slides[0].offsetWidth + 20; // Width + margin
+    let slideWidth;
+    
+    // Set up slide width calculation based on viewport
+    function calculateSlideWidth() {
+      const firstSlide = slides[0];
+      // Include the margin-right in the calculation
+      slideWidth = firstSlide.offsetWidth + parseInt(window.getComputedStyle(firstSlide).marginRight);
+      return slideWidth;
+    }
     
     // Initialize
+    calculateSlideWidth();
     updateSlider();
     startAutoScroll();
+    
+    // Recalculate on window resize
+    window.addEventListener('resize', function() {
+      calculateSlideWidth();
+      updateSlider(false); // Update without animation on resize
+    });
     
     // Set up event listeners
     prevBtn.addEventListener('click', () => {
@@ -295,6 +378,35 @@
       startAutoScroll();
     });
     
+    // Touch events for mobile swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+    
+    function handleSwipe() {
+      const swipeThreshold = 50; // Minimum distance for swipe detection
+      
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left - go to next slide
+        goToSlide(currentIndex + 1);
+        resetAutoScroll();
+      }
+      
+      if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right - go to previous slide
+        goToSlide(currentIndex - 1);
+        resetAutoScroll();
+      }
+    }
+    
     // Functions
     function goToSlide(index) {
       // Handle wrapping
@@ -308,9 +420,42 @@
       updateSlider();
     }
     
-    function updateSlider() {
-      // Update transform
-      slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    function updateSlider(animate = true) {
+      // Calculate visible slides based on screen width
+      const viewportWidth = window.innerWidth;
+      let visibleSlidesCount = 1;
+      
+      if (viewportWidth >= 1200) {
+        visibleSlidesCount = 4; // Large desktop
+      } else if (viewportWidth >= 992) {
+        visibleSlidesCount = 3; // Desktop
+      } else if (viewportWidth >= 576) {
+        visibleSlidesCount = 2; // Tablet
+      }
+      
+      // Adjust for smaller screens to center the active slide
+      let translateX = -currentIndex * slideWidth;
+      
+      // Center the active slide for large screens
+      if (visibleSlidesCount > 1) {
+        const centerOffset = (visibleSlidesCount - 1) * slideWidth / 2;
+        translateX = Math.max(-((slides.length - visibleSlidesCount) * slideWidth), Math.min(0, translateX + centerOffset));
+      }
+      
+      // Apply transition
+      if (!animate) {
+        slider.style.transition = 'none';
+      } else {
+        slider.style.transition = 'transform 0.5s ease';
+      }
+      
+      slider.style.transform = `translateX(${translateX}px)`;
+      
+      // Force a reflow to make sure the transition gets applied properly
+      if (!animate) {
+        slider.offsetHeight; 
+        slider.style.transition = 'transform 0.5s ease';
+      }
       
       // Update active classes
       slides.forEach((slide, i) => {
