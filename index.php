@@ -109,6 +109,19 @@
 </script>
 
 <?php include 'aboutus.php'; ?>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
+
+
 <?php include 'slider.php'; ?>
 <?php include 'includes/footer.php'; ?>
 

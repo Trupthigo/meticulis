@@ -25,7 +25,7 @@
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-menu">
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="index.php#aboutus">About Us</a></li>
                         <li><a href="services.php">Services</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                     </ul>
