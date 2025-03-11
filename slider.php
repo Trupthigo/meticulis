@@ -1,7 +1,3 @@
-<!-- index.php -->
-<?php
-// Optional: Add any PHP logic here
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,55 +8,94 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color:rgb(19, 19, 19);
+      background-color: rgb(19, 19, 19);
     }
 
+    /* Enhanced Slider Styles */
     .slider__wrapper {
       max-width: 1200px;
       margin: 50px auto;
       position: relative;
       overflow: hidden;
+      padding: 30px 0;
     }
 
     .slider {
       display: flex;
-      transition: all 0.3s ease;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
+      transition: transform 0.5s ease;
+      margin-left: 60px;
+      margin-right: 60px;
     }
 
     .slider__content {
       flex: 0 0 300px;
       margin-right: 20px;
-      scroll-snap-align: start;
       background: #323131;
       border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 20px;
       min-height: 400px;
       color: #fff;
+      transition: all 0.4s ease;
+      transform-origin: center;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .slider__content:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    
+    .slider__content.active {
+      transform: scale(1.08);
+      z-index: 10;
+      background: #3a3939;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4), 
+                  0 0 15px rgba(255, 215, 0, 0.2);
+    }
+    
+    .slider__content:not(.active) {
+      opacity: 0.7;
     }
 
     .slider__text span {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: bold;
       color: #ffd700;
+      display: block;
+      margin-bottom: 5px;
     }
 
     .slider__text h3 {
-      margin: 10px 0 5px;
-      font-size: 20px;
+      margin: 10px 0 15px;
+      font-size: 22px;
+      color: #fff;
     }
 
     .slider__text p {
       font-size: 16px;
+      line-height: 1.5;
     }
 
+    .slider__image {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+    
     .slider__image img {
       width: 100%;
       border-radius: 10px;
-      margin-top: 10px;
+      transition: transform 0.5s ease;
+      height: 180px;
+      object-fit: cover;
+    }
+    
+    .slider__content:hover .slider__image img,
+    .slider__content.active .slider__image img {
+      transform: scale(1.1);
     }
 
     /* Arrow Buttons */
@@ -68,18 +103,24 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(255, 215, 0, 0.2);
       border: none;
       color: #fff;
       font-size: 30px;
-      padding: 10px 15px;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       z-index: 10;
       border-radius: 50%;
+      transition: all 0.3s ease;
     }
 
     .arrow:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(255, 215, 0, 0.4);
+      transform: translateY(-50%) scale(1.1);
     }
 
     .arrow-left {
@@ -89,12 +130,47 @@
     .arrow-right {
       right: 10px;
     }
+    
+    /* Indicators */
+    .slider__indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 8px;
+    }
+    
+    .slider__indicator {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .slider__indicator.active {
+      background-color: #ffd700;
+      width: 25px;
+      border-radius: 10px;
+    }
 
-    /* Hide arrows on small screens if needed */
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .slider__content {
+        flex: 0 0 260px;
+        min-height: 380px;
+      }
+      
+      .slider__content.active {
+        transform: scale(1.05);
+      }
+    }
+    
     @media (max-width: 500px) {
       .arrow {
         font-size: 24px;
-        padding: 6px 10px;
+        height: 40px;
+        width: 40px;
       }
     }
   </style>
@@ -102,8 +178,8 @@
 <body>
 
 <div class="slider__wrapper">
-  <button class="arrow arrow-left" onclick="scrollSlider(-1)">&#8249;</button>
-  <button class="arrow arrow-right" onclick="scrollSlider(1)">&#8250;</button>
+  <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
+  <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
   
   <div class="slider" id="slider">
     <?php
@@ -140,33 +216,132 @@
       ],
     ];
 
-    foreach ($apple_facts as $fact) {
+    foreach ($apple_facts as $index => $fact) {
       echo '
-      <div class="slider__content">
+      <div class="slider__content '.($index === 0 ? 'active' : '').'" data-index="'.$index.'">
         <div class="slider__text">
           <span>' . $fact["number"] . '</span>
           <h3>' . $fact["title"] . '</h3>
           <p>' . $fact["text"] . '</p>
         </div>
         <figure class="slider__image">
-          <img src="' . $fact["image"] . '" alt="Apple Fact Image">
+          <img src="' . $fact["image"] . '" alt="'.$fact["title"].'">
         </figure>
       </div>';
+    }
+    ?>
+  </div>
+  
+  <div class="slider__indicators" id="sliderIndicators">
+    <?php
+    for ($i = 0; $i < count($apple_facts); $i++) {
+      echo '<div class="slider__indicator '.($i === 0 ? 'active' : '').'" data-index="'.$i.'"></div>';
     }
     ?>
   </div>
 </div>
 
 <script>
-  const slider = document.getElementById('slider');
-
-  function scrollSlider(direction) {
-    const cardWidth = document.querySelector('.slider__content').offsetWidth + 20; // card width + gap
-    slider.scrollBy({
-      left: direction * cardWidth,
-      behavior: 'smooth'
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slider__content');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.slider__indicator');
+    
+    let currentIndex = 0;
+    let autoScrollInterval;
+    const slideWidth = slides[0].offsetWidth + 20; // Width + margin
+    
+    // Initialize
+    updateSlider();
+    startAutoScroll();
+    
+    // Set up event listeners
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
+      resetAutoScroll();
     });
-  }
+    
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+      resetAutoScroll();
+    });
+    
+    // Add click events to indicators
+    indicators.forEach(indicator => {
+      indicator.addEventListener('click', () => {
+        const index = parseInt(indicator.getAttribute('data-index'));
+        goToSlide(index);
+        resetAutoScroll();
+      });
+    });
+    
+    // Add click events to slides
+    slides.forEach(slide => {
+      slide.addEventListener('click', () => {
+        const index = parseInt(slide.getAttribute('data-index'));
+        goToSlide(index);
+        resetAutoScroll();
+      });
+    });
+    
+    // Pause auto-scroll on hover
+    slider.addEventListener('mouseenter', () => {
+      clearInterval(autoScrollInterval);
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+      startAutoScroll();
+    });
+    
+    // Functions
+    function goToSlide(index) {
+      // Handle wrapping
+      if (index < 0) {
+        index = slides.length - 1;
+      } else if (index >= slides.length) {
+        index = 0;
+      }
+      
+      currentIndex = index;
+      updateSlider();
+    }
+    
+    function updateSlider() {
+      // Update transform
+      slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+      
+      // Update active classes
+      slides.forEach((slide, i) => {
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      
+      // Update indicators
+      indicators.forEach((indicator, i) => {
+        if (i === currentIndex) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+    }
+    
+    function startAutoScroll() {
+      autoScrollInterval = setInterval(() => {
+        goToSlide(currentIndex + 1);
+      }, 4000);
+    }
+    
+    function resetAutoScroll() {
+      clearInterval(autoScrollInterval);
+      startAutoScroll();
+    }
+  });
 </script>
 
 </body>
