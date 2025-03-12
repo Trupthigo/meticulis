@@ -1,4 +1,74 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php'; ?> 
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load PHPMailer
+require 'vendor/autoload.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get form inputs and sanitize
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $service = htmlspecialchars($_POST['service']);
+    $message = htmlspecialchars($_POST['message']);
+
+    // Create PHPMailer instance
+    $mail = new PHPMailer(true);
+
+    try {
+        // SMTP Configuration
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; 
+        $mail->SMTPAuth = true;
+        $mail->Username = 'mstrupthi@gmail.com'; // Use environment variables
+        $mail->Password = 'zdvy lkog rhpw tjiv'; // NEVER hardcode passwords
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        // Sender and Recipient
+        $mail->setFrom($email, $name);
+        $mail->addAddress('mstrupthi@gmail.com', 'Trupthi'); 
+
+        // Email Content
+        $mail->isHTML(true);
+        $mail->Subject = "New Contact Form Submission: $service";
+        $mail->Body = "
+            <h3>Contact Details</h3>
+            <p><strong>Name:</strong> $name</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Phone:</strong> $phone</p>
+            <p><strong>Service Interested In:</strong> $service</p>
+            <p><strong>Message:</strong> $message</p>
+        ";
+
+        // Send Email
+        $mail->send();
+        $alertMessage = "<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: 'Your message has been sent successfully.',
+                    confirmButtonText: 'OK'
+                });
+            });
+        </script>";
+    } catch (Exception $e) {
+        $alertMessage = "<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Message Not Sent',
+                    text: 'Error: {$mail->ErrorInfo}',
+                    confirmButtonText: 'Try Again'
+                });
+            });
+        </script>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +79,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/contact.css"> <!-- Local CSS in same folder -->
 </head>
+<style>
+    /* Popup Modal Styling */
+/* Popup Modal Styling */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+    </style>
 <body>
     <div class="container">
         <!-- <header>
@@ -26,7 +128,7 @@
                 <div class="form-body">
                     <div class="notification" id="notification"></div>
                     
-                    <form id="contactForm" action="send_email.php" method="post">
+                    <form id="contactForm" action="contact.php" method="post">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -41,13 +143,13 @@
                         
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="service">Service You're Interested In</label>
                             <select id="service" name="service">
-                                <option value="">Select a service</option>
+                                <option value="">Select a service</option> 
                                 <option value="business-consulting">Business Consulting</option>
                                 <option value="contract-solutions">Contract Solutions</option>
                                 <option value="project-management">Project Management</option>
@@ -65,10 +167,13 @@
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
                     </form>
-                        <div id="popup-message" class="popup">
-        <span id="popup-text"></span>
-        <button onclick="closePopup()">OK</button>
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="close-popup" class="close-btn">&times;</span>
+        <p id="popup-message">Your message has been sent successfully!</p>
     </div>
+</div>
 
                 </div>
             </div>
@@ -144,8 +249,12 @@
 
         </div>
     </div>
-    <script src="contact.js"></script>
-    
+    <script src="javascript/contact.js"></script>
+    <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Your Custom Script -->
+<script src="contact.js" defer></script>
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>

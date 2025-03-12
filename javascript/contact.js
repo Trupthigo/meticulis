@@ -23,6 +23,16 @@
         showNotification('Please enter a valid email address.', 'error');
         return;
     }
+    // Phone validation (allows digits, spaces, dashes, and optional + at the start)
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    if (!phoneRegex.test(formData.phone)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid Phone Number',
+            text: 'Please enter a valid phone number.',
+        });
+        return;
+    }
     
     // In a real application, you would send this data to your server using Ajax/fetch
     // For demonstration, we'll simulate a successful submission
@@ -43,33 +53,53 @@
             submitBtn.disabled = false;
         }, 3000);
     }, 1500);
-    function showPopup(message) {
-        document.getElementById('popup-text').innerHTML = message;
-        document.getElementById('popup-message').style.display = "block";
-    }
+// Function to show popup message
+function showPopup(message) {
+    document.getElementById('popup-text').innerHTML = message;
+    document.getElementById('popup-message').style.display = "block";
+}
 
-    function closePopup() {
-        document.getElementById('popup-message').style.display = "none";
-    }
+// Function to close popup
+function closePopup() {
+    document.getElementById('popup-message').style.display = "none";
+}
 
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission
+// Attach event listener to the contact form
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
 
-        let formData = new FormData(this);
+    let formData = new FormData(this);
 
-        fetch("send_email.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            showPopup(data); // Show success/error message in popup
-            document.getElementById("contactForm").reset(); // Reset form after submission
-        })
-        .catch(error => {
-            showPopup("An error occurred. Please try again.");
-        });
+    // Disable submit button and show loading animation
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    fetch("contact.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())  // Expect JSON response from PHP
+    .then(data => {
+        if (data.status === "success") {
+            showPopup(data.message); // Show success message
+            document.getElementById("contactForm").reset(); // Reset form
+        } else {
+            showPopup("Failed to send message. Please try again.");
+        }
+    })
+    .catch(error => {
+        showPopup("An error occurred. Please try again.");
+    })
+    .finally(() => {
+        // Re-enable submit button after 3 seconds
+        setTimeout(() => {
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            submitBtn.disabled = false;
+        }, 3000);
     });
+});
+
     
     // In a real application, the PHP code would handle the form submission
     // Example of how you would process this in PHP:

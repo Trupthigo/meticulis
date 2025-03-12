@@ -78,9 +78,9 @@
             padding-bottom: 5px;
         }
         
-        .nav-menu a:hover {
+        /* .nav-menu a:hover {
             color: #ffd700;
-        }
+        } */
         
         .nav-menu a::after {
             content: '';

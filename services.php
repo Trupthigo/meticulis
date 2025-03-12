@@ -139,7 +139,7 @@
       <a href="contact.php" class="cta-btn">Get Started</a>
     </div>
   </div>
-  <script src="services.js"></script>
+  <script src="javascript/services.js"></script>
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>
