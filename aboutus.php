@@ -47,7 +47,7 @@
                 </p>
             </div>
             <div class="story-image animate-fade-in" data-delay="400">
-                <img src="background.jpeg" alt="Meticulis team collaborating">
+                <img src="aboutus.jpg" alt="Meticulis team collaborating">
             </div>
             </div>
         </div>
