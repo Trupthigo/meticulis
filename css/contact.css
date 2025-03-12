@@ -49,11 +49,11 @@ body::after {
     z-index: -1;
 }
 
-/* .container {
+.container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0px 20px ;
-} */
+}
 
 /* Main content */
 .page-content {
@@ -318,17 +318,17 @@ body::after {
 .fab.fa-linkedin{
     margin: 5px 5px 5px 7px;
 }
-.social-section {
+.contact-social-section {
     margin-top: 10px;
 }
 
-.social-links {
+.contact-social-links {
     display: flex;
     gap: 12px;
     margin-top: 20px;
 }
 
-.social-link {
+.contact-social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +342,7 @@ body::after {
     transition: all 0.3s ease;
 }
 
-.social-link:hover {
+.contact-social-link:hover {
     background-color: #1e2124;
     color: #1e2124;
     transform: translateY(-3px); 
