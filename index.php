@@ -30,7 +30,7 @@
         // Define slide data (local images are in same folder as this index.php)
         $slides = [
           [
-            "background" => "pen.jpg",  // Local image
+            "background" => "meet.jpg",  // Local image
             "title" => "METICULIS",
             "text" => "Deligent minds driving sustainable growth"
           ],
