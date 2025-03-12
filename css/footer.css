@@ -131,50 +131,6 @@
     margin-top: 4px;
 }
 
-.footer-subscribe {
-    margin-top: 25px;
-}
-
-.footer-subscribe h4 {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.subscribe-form {
-    display: flex;
-    max-width: 100%;
-}
-
-.subscribe-form input {
-    flex: 1;
-    padding: 12px 15px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 4px 0 0 4px;
-    color: #fff;
-    font-size: 0.9rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.subscribe-form input:focus {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.subscribe-form button {
-    background-color: #f5d742;
-    color: #1e2124;
-    border: none;
-    padding: 0 15px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.subscribe-form button:hover {
-    background-color: #e6c728;
-}
-
 .footer-bottom {
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -184,20 +140,48 @@
     align-items: center;
 }
 
+/* Add this to your footer.css file */
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
 .copyright {
-    font-size: 0.9rem;
+    flex: 1;
+    text-align: left;
 }
 
 .footer-legal {
-    display: flex;
-    gap: 20px;
+    flex: 1;
+    text-align: right;
 }
 
-.footer-legal a {
-    color: #d6d9db;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
+.footer-legal .rights ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-legal .rights p {
+    margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .copyright, .footer-legal {
+        text-align: center;
+        flex: auto;
+        width: 100%;
+    }
 }
 
 .footer-legal a:hover {

@@ -1,7 +1,3 @@
-<?php
-// footer.php
-?>
-
 <!-- ===== Footer Section Start ===== -->
 <link rel="stylesheet" href="../css/footer.css"> <!-- Your custom CSS file -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yN1JZL3dOLpjU+vSkkW5L6kVeFjRMv1X0tIQSLk9pZ5QTVwIg3x/NjNzAGL4vqiwTgAhrzXh3Sp1ZCEx6hIb2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,18 +9,6 @@
                 <div class="footer-column footer-about">
                     <h3 class="footer-heading">About Meticulis</h3>
                     <p>Delivering exceptional software solutions since 1981. Our core values of quality, innovation, and dedication drive everything we do.</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/meticulis" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/meticulisltd" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/meticulisltd/" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-
                 </div>
                 
                 <div class="footer-column footer-links">
@@ -49,15 +33,19 @@
                 <div class="footer-column footer-contact">
                     <h3 class="footer-heading">Contact Us</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps?q=24+Austin+House,+King+Street,+Norwich,+NR1+1FW,+United+Kingdom" style="color: inherit; text-decoration: none;"> 24 Austin House, King Street, Norwich, NR11FW, United Kingdom </li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">admin@meticulis.co.uk</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps?q=24+Austin+House,+King+Street,+Norwich,+NR1+1FW,+United+Kingdom" style="color: inherit; text-decoration: none;"> 24 Austin House, King Street, Norwich, NR11FW, United Kingdom </a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">admin@meticulis.co.uk</a></li>
                     </ul>
-                    <div class="footer-subscribe">
-                        <!-- <h4>Subscribe to our newsletter</h4> -->
-                        <!-- <form class="subscribe-form" method="post" action="#">
-                            <input type="email" name="subscriber_email" placeholder="Your email" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form> -->
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/meticulis" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/meticulisltd" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/meticulisltd/" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -67,12 +55,12 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="copyright">
-                <p>&copy; <?php echo date('Y'); ?> Meticulis. All Rights Reserved.</p>
+                <p>All Rights Reserved&copy; <?php echo date('Y'); ?> <a href="index.php">Meticulis.</a></p>
             </div>
             <div class="footer-legal">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
+                <div class="rights">
+                    <p>Developed and maintained by <a href="https://optimumsync.com/">OptimumSync.</a></p>
+                </div>
             </div>
         </div>
     </div>
