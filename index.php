@@ -30,17 +30,17 @@
         // Define slide data (local images are in same folder as this index.php)
         $slides = [
           [
-            "background" => "https://www.simplilearn.com/ice9/free_resources_article_thumb/project_management_coursefees.jpg",  // Local image
+            "background" => "background.jpeg",  // Local image
             "title" => "METICULIS",
             "text" => "Deligent minds driving sustainable growth"
           ],
           [
-            "background" => "https://stridefuture.com/wp-content/uploads/Top-10-Software-Development-Trends-in-2023-Blog.png", // Another local image
+            "background" => "background.jpeg", // Another local image
             "title" => "METICULIS",
             "text" => "Deligent minds driving sustainable growth"
           ],
           [
-            "background" => "https://emeritus.org/in/wp-content/uploads/sites/3/2022/10/Technical-Skills_How-to-Them-Master-in-2022-768x511.jpg.webp", // Another local image
+            "background" => "background.jpeg", // Another local image
             "title" => "METICULIS",
             "text" => "Deligent minds driving sustainable growth"
           ]
