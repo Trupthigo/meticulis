@@ -35,7 +35,7 @@
             "text" => "Deligent minds driving sustainable growth"
           ],
           [
-            "background" => "r.jpg", // Another local image
+            "background" => "w.jpg", // Another local image
             "title" => "METICULIS",
             "text" => "Deligent minds driving sustainable growth"
           ],
