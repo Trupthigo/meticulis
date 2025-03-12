@@ -113,6 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </style>
 <body>
+    <?php include 'includes/header.php'; ?> 
     <div class="container">
         <!-- <header>
             <a href="index.html" class="logo">Contact US</a>
@@ -255,7 +256,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Your Custom Script -->
-<script src="contact.js" defer></script>
+<script src="javascript/contact.js" defer></script>
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>

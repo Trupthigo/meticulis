@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/services.css">
 </head>
 <body>
+  <?php include 'includes/header.php'; ?>
   <div class="container">
     <!-- Header Section -->
     <div class="services-header">

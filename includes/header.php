@@ -12,12 +12,12 @@
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
-        
+
         body {
             background-color: #121212;
             color: #f1f1f1;
         }
-        
+
         /* Header Styles */
         .header {
             background-color: #000000;
@@ -27,26 +27,26 @@
             z-index: 100;
             width: 100%;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .nav-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
-            font-size: 32px; /* Increased from 2px to 32px */
+            font-size: 32px;
             font-weight: bold;
             color: #ffffff;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px; /* Adds some spacing between text and image */
+            gap: 10px;
         }
 
         .logo img {
@@ -55,19 +55,16 @@
             display: block;
         }
 
-
-
-        
         /* Navigation Menu */
         .nav-menu {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-menu li {
             margin-left: 30px;
         }
-        
+
         .nav-menu a {
             color: #e1e1e1;
             text-decoration: none;
@@ -77,11 +74,7 @@
             position: relative;
             padding-bottom: 5px;
         }
-        
-        /* .nav-menu a:hover {
-            color: #ffd700;
-        } */
-        
+
         .nav-menu a::after {
             content: '';
             position: absolute;
@@ -92,11 +85,11 @@
             left: 0;
             transition: width 0.3s ease;
         }
-        
+
         .nav-menu a:hover::after {
             width: 100%;
         }
-        
+
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -105,7 +98,7 @@
             height: 20px;
             position: relative;
         }
-        
+
         .hamburger span {
             display: block;
             position: absolute;
@@ -113,45 +106,35 @@
             width: 100%;
             background: #e1e1e1;
             border-radius: 3px;
-            opacity: 1;
             left: 0;
-            transform: rotate(0deg);
             transition: .25s ease-in-out;
         }
-        
-        .hamburger span:nth-child(1) {
-            top: 0px;
-        }
-        
-        .hamburger span:nth-child(2) {
-            top: 8px;
-        }
-        
-        .hamburger span:nth-child(3) {
-            top: 16px;
-        }
-        
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+
         .hamburger.active span:nth-child(1) {
             top: 8px;
             transform: rotate(45deg);
         }
-        
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
-        
+
         .hamburger.active span:nth-child(3) {
             top: 8px;
             transform: rotate(-45deg);
         }
-        
+
         /* Responsive Styles */
         @media screen and (max-width: 768px) {
             .hamburger {
                 display: block;
                 z-index: 101;
             }
-            
+
             .nav-menu {
                 position: fixed;
                 top: 0;
@@ -164,26 +147,35 @@
                 transition: 0.3s ease;
                 box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
             }
-            
+
             .nav-menu.active {
                 right: 0;
             }
-            
+
             .nav-menu li {
                 margin: 0;
                 padding: 15px 30px;
                 width: 100%;
                 border-bottom: 1px solid #333;
             }
-            
+
             .nav-menu a {
                 font-size: 18px;
-                width: 100%;
                 display: block;
+                width: 100%;
             }
-            
+
             .header {
                 padding: 15px 20px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .logo {
+                font-size: 24px;
+            }
+            .logo img {
+                height: 40px;
             }
         }
     </style>
@@ -192,15 +184,15 @@
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
-            <a href="index.php" class="logo"><img src="../logo.jpg" alt="Meticulis">METICULIS</a>
-
-                
+                <a href="index.php" class="logo">
+                    <img src="logo.jpg" alt="Meticulis">
+                    METICULIS
+                </a>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                
                 <ul class="nav-menu">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="index.php#aboutus">About Us</a></li>
@@ -210,37 +202,36 @@
             </div>
         </div>
     </header>
-    
+
     <script>
-        // JavaScript for toggle menu
-        document.addEventListener('DOMContentLoaded', function() {
+        // Hamburger toggle
+        document.addEventListener('DOMContentLoaded', () => {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
-            
-            hamburger.addEventListener('click', function() {
+
+            hamburger.addEventListener('click', () => {
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = navMenu.contains(event.target);
-                const isClickInsideHamburger = hamburger.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickInsideHamburger && navMenu.classList.contains('active')) {
+
+            // Close menu on outside click
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
                     hamburger.classList.remove('active');
                     navMenu.classList.remove('active');
                 }
             });
-            
-            // Close menu when window is resized to desktop size
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+
+            // Close menu on resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
                     hamburger.classList.remove('active');
                     navMenu.classList.remove('active');
                 }
             });
         });
+
+        
     </script>
 </body>
 </html>
