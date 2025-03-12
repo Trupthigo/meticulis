@@ -134,31 +134,26 @@
 .footer-bottom {
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #111; /* optional background */
 }
-
-/* Add this to your footer.css file */
 
 .footer-bottom .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 15px 0;
 }
 
-.copyright {
+.footer-bottom .copyright {
     flex: 1;
     text-align: left;
 }
 
-.footer-legal {
+.footer-bottom .footer-legal {
     flex: 1;
     text-align: right;
 }
+
 
 .footer-legal .rights ul {
     margin: 0;
@@ -171,6 +166,21 @@
 }
 
 /* Mobile responsiveness */
+
+@media (max-width: 768px) {
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-bottom .copyright,
+    .footer-bottom .footer-legal {
+        text-align: center;
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .footer-bottom .container {
         flex-direction: column;
