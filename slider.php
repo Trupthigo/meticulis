@@ -256,31 +256,31 @@
         "number" => 1,
         "title" => "Our Mission",
         "text" => "Empower businesses with expert consulting and contracting solutions, driving efficiency, innovation, and sustainable growth.",
-        "image" => "https://images.unsplash.com/photo-1458011170811-0c83ce240f99?ixlib=rb-0.3.5&auto=format&fit=crop&w=800&q=90"
+        "image" => "mission.jpg"
       ],
       [
         "number" => 2,
         "title" => "Core Values",
         "text" => "Excellence, Innovation, Integrity, Client-Centricity, and Sustainable Growth.",
-        "image" => "https://images.unsplash.com/photo-1506277548624-5d9498cde122?ixlib=rb-0.3.5&auto=format&fit=crop&w=800&q=90"
+        "image" => "core.jpg"
       ],
       [
         "number" => 3,
         "title" => "Team Expertise",
         "text" => "Seasoned IT professionals with extensive industry knowledge and certifications.",
-        "image" => "https://images.unsplash.com/photo-1503327655231-9a047d4772b6?ixlib=rb-0.3.5&auto=format&fit=crop&w=800&q=90"
+        "image" => "Team.jpg"
       ],
       [
         "number" => 4,
         "title" => "Global Presence",
         "text" => "We have access to a strong IT and business talent pool based in India, with skilled professionals in strategy, technology, and operations.",
-        "image" => "https://images.unsplash.com/photo-1513677785800-9df79ae4b10b?ixlib=rb-0.3.5&auto=format&fit=crop&w=800&q=90"
+        "image" => "globe.jpg"
       ],
       [
         "number" => 5,
         "title" => "HQ Office",
         "text" => "Our HQ operates from the UK to ensure seamless collaboration across time zones, enabling round-the-clock productivity for international clients.",
-        "image" => "https://images.unsplash.com/photo-1506808541308-577f3be75bb7?ixlib=rb-0.3.5&auto=format&fit=crop&w=800&q=90"
+        "image" => "hq.jpg"
       ],
     ];
 
