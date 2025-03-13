@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>METICULIS</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="../css/index.css"> <!-- Local CSS in same folder -->
