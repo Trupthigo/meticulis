@@ -42,8 +42,8 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="aboutus2.php">About Us</a></li>
-                <li><a href="services.php">Services</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="index.php#ourservices">Services</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
             </ul>
         </div>

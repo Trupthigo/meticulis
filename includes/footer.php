@@ -14,17 +14,17 @@
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-menu">
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="index.php#aboutus">About Us</a></li>
-                        <li><a href="services.php">Services</a></li>
+                        <li><a href="aboutus.php">About Us</a></li>
+                        <li><a href="index.php#ourservices">Services</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column footer-services">
                     <h3 class="footer-heading">Our Services</h3>
                     <ul class="footer-menu">
-                        <li><a href="services.php#skilled-resources">Skilled Technical Resources</a></li>
-                        <li><a href="services.php#project-management">Project Management</a></li>
-                        <li><a href="services.php#software-development">Software Development</a></li>
+                        <li><a href="index.php#ourservices">Skilled Technical Resources</a></li>
+                        <li><a href="index.php#ourservices">Project Management</a></li>
+                        <li><a href="index.php#ourservices">Software Development</a></li>
                     </ul>
                 </div>
                 <div class="footer-column footer-contact">

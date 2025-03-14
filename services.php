@@ -13,6 +13,7 @@
   <div class="container">
     <!-- Header Section -->
     <div class="services-header">
+    <section id="ourservices">
       <h1>Our Services</h1>
       <p>We deliver innovative and tailored services to help businesses transform and thrive in today's competitive landscape. Our team of experts is committed to ensuring your success through our comprehensive service offerings.</p>
     </div>
@@ -139,6 +140,7 @@
       <a href="contact.php" class="cta-btn">Get Started</a>
     </div>
   </div>
+</section>
   <script src="javascript/services.js"></script>
 </body>
 </html>

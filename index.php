@@ -120,7 +120,7 @@
     }
   });
 </script>
-<?php include 'aboutus.php'; ?>
+<?php include 'stats.php'; ?>
 
 <?php include 'services.php'; ?>
 <?php include 'includes/footer.php'; ?>
