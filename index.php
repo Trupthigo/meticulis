@@ -109,8 +109,6 @@
     }
   });
 </script>
-
-<?php include 'aboutus.php'; ?>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash;
@@ -122,9 +120,9 @@
     }
   });
 </script>
+<?php include 'aboutus.php'; ?>
 
-
-<?php include 'slider.php'; ?>
+<?php include 'services.php'; ?>
 <?php include 'includes/footer.php'; ?>
 
 

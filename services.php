@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="../css/services.css">
 </head>
 <body>
-  <?php include 'includes/header.php'; ?>
   <div class="container">
     <!-- Header Section -->
     <div class="services-header">
@@ -141,6 +140,5 @@
     </div>
   </div>
   <script src="javascript/services.js"></script>
-  <?php include 'includes/footer.php'; ?>
 </body>
 </html>

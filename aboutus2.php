@@ -71,7 +71,7 @@
           Our team consists of seasoned IT professionals with extensive industry knowledge and certifications. 
           We deliver comprehensive solutions through deep technical expertise and strategic insight.
         </p>
-        <img src="team2.jpg" alt="Meticulis team" class="expertise-image rotate-in">
+        <img src="people.jpg" alt="Meticulis team" class="expertise-image rotate-in">
       </div>
     </div>
   </section>

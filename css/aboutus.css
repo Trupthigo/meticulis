@@ -21,7 +21,7 @@ body {
 
 /* Header section */
 .hero-section {
-    background-color: #1e2124;
+    background-color: #000000;
     padding: 80px 0;
     text-align: center;
 }
@@ -123,68 +123,6 @@ body {
     width: 40px;
     height: 2px;
     background-color: #f5d742;
-}
-
-/* Story section */
-.story-section {
-    padding: 80px 0;
-    background-color: #1a1a1a;
-}
-
-.story-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
-}
-
-.story-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.story-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #d6d9db;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.story-text h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 3px;
-    background-color: #f5d742;
-}
-
-.story-text p {
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.story-image {
-    flex: 1;
-    min-width: 300px;
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.story-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease;
-}
-
-.story-image:hover img {
-    transform: rotateY(5deg) rotateX(5deg);
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Animations */
