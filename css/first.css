@@ -134,78 +134,24 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #121212; /* Dark background */
 }
 
-.mainNav {
-  width: 100%;
-  height: 80px;
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #ffffff; /* Changed to white */
-  text-transform: uppercase;
-  padding: 0 40px;
-}
+
 @media screen and (max-width: 799px) {
   .mainNav {
     padding: 0 20px;
   }
 }
-.mainNav__logo {
-  font-weight: 800;
-  letter-spacing: 1px;
-  font-size: 18px;
-  color: #d4af37; /* Changed to gold */
-}
-.mainNav__links {
-  display: flex;
-}
-@media screen and (max-width: 799px) {
-  .mainNav__links {
-    display: none;
-  }
-}
-.mainNav__link {
-  letter-spacing: 1px;
-  font-size: 14px;
-  margin-left: 20px;
-  font-weight: 600;
-  box-shadow: inset 0px -10px 0px rgba(212, 175, 55, 0.5); /* Changed to gold */
-  transition: all 0.4s ease, transform 0.2s ease;
-  padding: 2px 4px;
-  transform: translateY(0px);
-}
-.mainNav__link:hover {
-  transform: translateY(-5px);
-  box-shadow: inset 0px -20px 0px #d4af37; /* Changed to gold */
-  color: #121212; /* Dark text on gold background */
-}
-.mainNav__icon {
-  background-image: url(https://rafaelalucas91.github.io/assets/icons/black/icon-141.svg);
-  width: 32px;
-  height: 32px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: none;
-  filter: invert(1); /* Invert to make it white */
-}
-@media screen and (max-width: 799px) {
-  .mainNav__icon {
-    display: block;
-  }
-}
-
 .mainHeading {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  padding: 0 40px;
-  background-image: linear-gradient(to top, #121212 0%, #1e1e1e 100%); /* Dark gradient */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 0; /* Remove the top margin to eliminate the gap */
+    padding: 0 40px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(to bottom, #000000 0%, #121212 100%); /* Black to dark gray gradient */
 }
 @media screen and (max-width: 799px) {
   .mainHeading {
@@ -233,7 +179,7 @@ body {
   background-color: rgba(18, 18, 18, 0.7); /* Dark with transparency */
   padding: 40px;
   max-width: 620px;
-  margin-top: 100px;
+  margin-top: 160px;
   width: 70%;
   backdrop-filter: blur(8px);
   animation: text 0.8s 0.6s ease backwards;
@@ -369,10 +315,10 @@ body {
   transition: all 0.4s ease;
 }
 .cta:hover {
-  border: 1px solid rgba(212, 175, 55, 0.1); /* Changed to gold */
-  box-shadow: inset 0px -80px 0px #d4af37; /* Changed to gold */
-  transform: translateY(-5px);
-  color: #121212; /* Dark text on gold background */
+  border: 1px solid rgba(212, 175, 55, 0.1) !important;
+  box-shadow: inset 0px -80px 0px #d4af37 !important;
+  transform: translateY(-5px) !important;
+  color: #121212 !important;
 }
 @media screen and (max-width: 799px) {
   .cta {

@@ -388,7 +388,7 @@
         "number" => 1,
         "title" => "Excellence",
         "text" => "strive for excellence in everything we do, setting high standards and consistently delivering superior results..",
-        "image" => "mission.jpg"
+        "image" => "excellence.webp"
       ],
       [
         "number" => 2,
@@ -400,7 +400,7 @@
         "number" => 3,
         "title" => "Intigrity",
         "text" => "conduct business with honesty, transparency, and ethical practices that foster trust and long-term relationships.",
-        "image" => "Team.jpg"
+        "image" => "intigrity.webp"
       ],
       [
         "number" => 4,
@@ -412,7 +412,7 @@
         "number" => 5,
         "title" => "Sustainable Growth",
         "text" => "We pursue growth that benefits all stakeholders while contributing positively to society and the environment.",
-        "image" => "hq.jpg"
+        "image" => "sustainable.webp"
       ],
     ];
 
