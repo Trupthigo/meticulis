@@ -581,7 +581,7 @@
     <div class="container">
       <div class="diagonal-content">
         <div class="diagonal-text">
-          <h2 class="section-title fade-in">Ours <span class="highlight">Mission</span></h2>
+          <h2 class="section-title fade-in">Our <span class="highlight">Mission</span></h2>
           <p class="section-description fade-in">
             Our mission is to empower businesses with expert consulting and contracting solutions that drive efficiency, innovation, and sustainable growth. We strive to provide tailored strategies and cutting-edge solutions that enhance operational performance, streamline processes, and foster long-term success. By leveraging industry expertise and a commitment to excellence, we help organizations navigate challenges, seize opportunities, and achieve their full potential in a rapidly evolving marketplace.
             </p>

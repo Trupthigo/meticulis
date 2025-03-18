@@ -387,19 +387,19 @@
       [
         "number" => 1,
         "title" => "Excellence",
-        "text" => "strive for excellence in everything we do, setting high standards and consistently delivering superior results..",
+        "text" => "Strive for excellence in everything we do, setting high standards and consistently delivering superior results..",
         "image" => "excellence.webp"
       ],
       [
         "number" => 2,
         "title" => "Innovation",
-        "text" => "embrace change and continuously seek new and better ways to solve problems and create value.",
+        "text" => "Embrace change and continuously seek new and better ways to solve problems and create value.",
         "image" => "core.jpg"
       ],
       [
         "number" => 3,
         "title" => "Intigrity",
-        "text" => "conduct business with honesty, transparency, and ethical practices that foster trust and long-term relationships.",
+        "text" => "Conduct business with honesty, transparency, and ethical practices that foster trust and long-term relationships.",
         "image" => "intigrity.webp"
       ],
       [
