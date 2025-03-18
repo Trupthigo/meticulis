@@ -27,7 +27,7 @@
             </div>
             <div class="service-content">
             <h2 class="service-title">Skilled Technical Resources</h2>
-            <p class="service-description">Our experienced IT professionals seamlessly integrate with your team to enhance productivity and deliver exceptional results.</p>
+            <p class="service-description">Our experienced IT professionals seamlessly integrate with your team to enhance productivity and deliver exceptional solutions and results.</p>
             <div class="service-features">
                 <div class="feature-item">
                 <i class="fas fa-check-circle feature-icon"></i>
@@ -55,7 +55,7 @@
             </div>
             <div class="service-content">
             <h2 class="service-title">Project Management</h2>
-            <p class="service-description">End-to-end project management services to ensure timely delivery and successful outcomes for your business initiatives.</p>
+            <p class="service-description">End-to-end project management services to ensure timely delivery and successful outcomes for your business initiatives. From planning to execution, we provide strategic oversight and expert coordination to drive efficiency and success.</p>
             <div class="service-features">
                 <div class="feature-item">
                 <i class="fas fa-check-circle feature-icon"></i>
@@ -84,7 +84,7 @@
         </div>
         <div class="service-content">
           <h2 class="service-title">Software Development</h2>
-          <p class="service-description">Custom software solutions tailored to your specific business needs and objectives, designed to drive growth and efficiency.</p>
+          <p class="service-description">Custom software solutions tailored to your specific business needs and objectives, designed to drive growth and efficiency. Our expert team ensures seamless integration, scalability, and innovation to keep you ahead of the competition.</p>
           <div class="service-features">
             <div class="feature-item">
               <i class="fas fa-check-circle feature-icon"></i>

@@ -144,9 +144,9 @@
     width: 100%;
     height: 5px;
     background: linear-gradient(90deg, var(--gold-dark), var(--gold-primary));
-    z-index: 1;
+    z-index: -1;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    /* transition: opacity 0.4s ease; */
   }
 
   .service-card:hover::before {
@@ -186,9 +186,9 @@
   display: inline-block;
   }
 
-  .service-card:hover .service-icon i {
-  transform: translateY(10px); /* Move down */
-  }
+  /* .service-card:hover .service-icon i {
+  transform: translateY(10px); Move down */
+  
 
 
   .service-content {
@@ -302,7 +302,6 @@
   /* Process Section */
   .process-section {
     margin-top: 80px;
-    opacity: 0;
     animation: fadeUp 0.8s ease-out 0.9s forwards;
   }
 
@@ -330,6 +329,7 @@
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    gap: 20px;
   }
 
   .process-wrapper::before {
@@ -344,16 +344,10 @@
     opacity: 0.3;
   }
 
-  @media (max-width: 767px) {
-    .process-wrapper::before {
-      display: none;
-    }
-  }
-
   .process-step {
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     max-width: 300px;
-    margin: 0 20px 40px;
+    margin: 0 10px 30px;
     position: relative;
     z-index: 1;
     text-align: center;

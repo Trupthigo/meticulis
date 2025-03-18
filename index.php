@@ -122,7 +122,7 @@
   });
 </script>
 
-
+<?php include 'stats.php'; ?>
 <?php include 'services.php'; ?>
 <?php include 'includes/footer.php'; ?>
 
