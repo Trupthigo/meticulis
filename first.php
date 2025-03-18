@@ -12,7 +12,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    margin-top: 0;
+    margin-top: 40px;
     padding: 0 40px;
     padding-bottom: 60px;
     background-image: linear-gradient(to bottom, #000000 0%, #121212 100%);
