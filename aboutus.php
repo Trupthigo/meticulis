@@ -1,6 +1,5 @@
 
-<?php include 'includes/header.php'; ?>
-<?php include 'first.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -573,6 +572,8 @@
   </style>
 </head>
 <body>
+  <?php include 'includes/header.php'; ?>
+  <?php include 'first.php'; ?>
   <!-- Header would be included here -->
   
   <section class="diagonal-section">

@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +22,7 @@
   </style>
 </head>
 <body>
+  <?php include 'includes/header.php'; ?>
 
 <!-- Start of Hero Slider -->
 <section class="hero-slider hero-style">
@@ -62,7 +63,7 @@
             <div class="clearfix"></div>
             <div data-swiper-parallax="500" class="slide-btns">
               <a href="contact.php" class="theme-btn-s2">Contact now</a>
-              <a href="services.php" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
+              <a href="index.php#ourservices" class="theme-btn-s3"><i class="fas fa-chevron-circle-right"></i> Get Info</a>
             </div>
           </div>
         </div>
