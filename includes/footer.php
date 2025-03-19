@@ -1,4 +1,8 @@
-<!-- footer.php -->
+<?php
+// Add this to the top of your footer.php or include it in first.php
+$base_url = '/'; // Change this to your site's root directory path, e.g., '/meticulis/' if in a subdirectory
+?>
+
 <link rel="stylesheet" href="../css/footer.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yN1JZL3dOLpjU+vSkkW5L6kVeFjRMv1X0tIQSLk9pZ5QTVwIg3x/NjNzAGL4vqiwTgAhrzXh3Sp1ZCEx6hIb2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -56,6 +60,6 @@
     <div class="footer-shape"></div>
 </footer>
 
-<script src="../javascript/footer.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" integrity="sha512-qRCu9Fnw3zr4zvXP7BozM2ZsUZmEf/Nc3aBz7K5r1Z8Ndp2FZYhPSl9y1yQvTgICU5LKXz0I0Bv3J4FFv9Vg1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
