@@ -165,7 +165,7 @@
       z-index: 0;
     }
     
-    .expertise-bg-line {
+    /* .expertise-bg-line {
       position: absolute;
       height: 1px;
       background: var(--gold);
@@ -186,7 +186,7 @@
       z-index: 0;
       animation: expertise-pulse 12s infinite alternate ease-in-out;
     }
-    
+     */
     @keyframes expertise-pulse {
       0% { opacity: 0.1; transform: scale(1) translate(0, 0); }
       50% { opacity: 0.3; transform: scale(1.1) translate(2%, -2%); }
