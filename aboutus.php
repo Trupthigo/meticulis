@@ -70,6 +70,7 @@
       flex: 1 1 300px;
       max-width: 600px;
     }
+    
     .diagonal-image {
       flex: 1 1 300px;
       height: 400px;
@@ -126,22 +127,6 @@
       font-size: 1.1rem;
       margin-bottom: 30px;
     }
-    @keyframes tilt {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(2deg); }
-    }
-    
-    /* .diagonal-image {
-      flex: 1;
-      min-width: 300px;
-      height: 400px;
-      border-radius: 10px;
-      overflow: hidden;
-      background: var(--dark-tertiary);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      animation: tilt 5s infinite alternate ease-in-out;
-      object-fit: cover;
-    } */
     
     @keyframes tilt {
       0% { transform: rotate(0deg); }
@@ -394,7 +379,7 @@
       transform: rotate(0) scale(1);
     }
     
-    /* Floating Elements
+    /* Floating Elements */
     .floating-dots {
       position: absolute;
       width: 100%;
@@ -412,7 +397,17 @@
       background: var(--gold);
       border-radius: 50%;
       opacity: 0.2;
-    } */
+    }
+    
+    .global-dots {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
     
     /* Responsive adjustments */
     @media (max-width: 1200px) {
@@ -429,17 +424,28 @@
       .diagonal-content {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
       }
       
       .diagonal-text {
         max-width: 100%;
         text-align: center;
+        order: 1;
+      }
+      
+      .diagonal-image {
+        order: 2;
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
       }
       
       .section-title {
         margin-top: 50px;
         margin-left: 0;
         text-align: center;
+        width: 100%;
+        display: block;
       }
       
       .expertise-image {
@@ -455,9 +461,12 @@
         padding: 80px 0;
       }
       
+      .diagonal-text {
+        padding: 0px 10px;
+      }
+      
       .diagonal-image {
-        height: 300px;
-        min-width: 250px;
+        height: 250px;
       }
       
       .section-description {
@@ -483,12 +492,15 @@
       }
       
       .diagonal-image {
-        height: 250px;
-        min-width: 220px;
+        height: 200px;
       }
       
       .section-title {
         font-size: 1.8rem;
+      }
+      
+      .section-description {
+        font-size: 0.95rem;
       }
       
       .expertise-title {
@@ -507,74 +519,15 @@
         font-size: 1.4rem;
       }
     }
-    @media (max-width: 992px) {
-      .diagonal-content {
-        flex-direction: column;
-        justify-content: center;
-      }
-      
-      .diagonal-text {
-        max-width: 100%;
-        text-align: center;
-        order: 1;
-      }
-      
-      .diagonal-image {
-        order: 2;
-        width: 100%;
-        max-width: 500px;
-        height: 300px;
-      }
-      
-      .section-title {
-        margin-left: 0;
-        text-align: center;
-        width: 100%;
-        display: block;
-      }
-    }
     
-    @media (max-width: 768px) {
-      .diagonal-section {
-        padding: 80px 0;
-      }
-      
-      .diagonal-text {
-        padding: 0px 10px;
-      }
-      
-      .diagonal-image {
-        height: 250px;
-      }
-      
-      .section-description {
-        font-size: 1rem;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .diagonal-section {
-        padding: 60px 0;
-      }
-      
-      .diagonal-image {
-        height: 200px;
-      }
-      
-      .section-title {
-        font-size: 1.8rem;
-      }
-      
-      .section-description {
-        font-size: 0.95rem;
-      }
+    @keyframes floating { 
+      0% { transform: translate(0, 0); } 
+      100% { transform: translate(10px, 10px); }
     }
   </style>
 </head>
 <body>
   <?php include 'includes/header.php'; ?>
- 
-  <!-- Header would be included here -->
   
   <section class="diagonal-section">
     <div class="diagonal-bg"></div>
@@ -584,7 +537,7 @@
           <h2 class="section-title fade-in">Our <span class="highlight">Mission</span></h2>
           <p class="section-description fade-in">
             Our mission is to empower businesses with expert consulting and contracting solutions that drive efficiency, innovation, and sustainable growth. We strive to provide tailored strategies and cutting-edge solutions that enhance operational performance, streamline processes, and foster long-term success. By leveraging industry expertise and a commitment to excellence, we help organizations navigate challenges, seize opportunities, and achieve their full potential in a rapidly evolving marketplace.
-            </p>
+          </p>
         </div>
         <img src="mission.jpg" alt="Meticulis mission" class="diagonal-image slide-in-right">
       </div>
@@ -598,9 +551,13 @@
         <h2 class="section-title fade-in">Core <span class="highlight">Values</span></h2>
         <p class="fade-in">Our values guide everything we do and form the foundation of our organization's culture.</p>
       </div>
-      <?php include 'slider.php'; ?>
-      <!-- Slider content would be included here -->
-      <!-- This is a placeholder for the slider.php include -->
+      <?php 
+      if (file_exists('slider.php')) {
+        include 'slider.php';
+      } else {
+        echo '<div class="fade-in">Values slider content will be loaded here.</div>';
+      }
+      ?>
     </div>
   </section>
   
@@ -620,7 +577,7 @@
   </section>
   
   <section class="global-section">
-    <div class="global-dots"></div>
+    <div class="global-dots" id="globalDots"></div>
     <div class="container">
       <h2 class="section-title slide-in-right">Global <span class="highlight">Presence</span></h2>
       <div class="location-cards">
@@ -638,64 +595,91 @@
     </div>
   </section>
 
-  <!-- Footer would be included here -->
+  <?php include 'includes/footer.php'; ?>
 
   <script>
     // Create floating dots
-    const dotsContainer = document.getElementById('floatingDots');
-    const dotCount = 40; // Reduced for better performance
-    
-    for (let i = 0; i < dotCount; i++) {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      
-      // Random positioning
-      const x = Math.random() * 100;
-      const y = Math.random() * 100;
-      dot.style.left = `${x}%`;
-      dot.style.top = `${y}%`;
-      
-      // Random size
-      const size = Math.random() * 3 + 2;
-      dot.style.width = `${size}px`;
-      dot.style.height = `${size}px`;
-      
-      // Random opacity
-      dot.style.opacity = Math.random() * 0.3;
-      
-      // Simplified animation
-      const duration = 5 + Math.random() * 10;
-      dot.style.animation = `floating ${duration}s infinite alternate ease-in-out`;
-      dot.style.animationDelay = `${Math.random() * 5}s`;
-      
-      dotsContainer.appendChild(dot);
-    }
-    
-    // Create expertise background lines
-    const expertiseBg = document.getElementById('expertiseBg');
-    const lineCount = 8; // Reduced for better performance
-    
-    for (let i = 0; i < lineCount; i++) {
-      const line = document.createElement('div');
-      line.classList.add('expertise-bg-line');
-      
-      // Positioning
-      const yPos = (i / lineCount) * 100;
-      line.style.top = `${yPos}%`;
-      
-      expertiseBg.appendChild(line);
-    }
-    
-    // Animation with Intersection Observer
     document.addEventListener('DOMContentLoaded', function() {
-      // Add keyframe for floating animation
-      const styleSheet = document.styleSheets[0];
-      styleSheet.insertRule(`
-        @keyframes floating { 
-          0% { transform: translate(0, 0); } 
-          100% { transform: translate(10px, 10px); }
+      // Create dots for the values section
+      const dotsContainer = document.getElementById('floatingDots');
+      if (dotsContainer) {
+        const dotCount = 40; // Reduced for better performance
+        
+        for (let i = 0; i < dotCount; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('dot');
+          
+          // Random positioning
+          const x = Math.random() * 100;
+          const y = Math.random() * 100;
+          dot.style.left = `${x}%`;
+          dot.style.top = `${y}%`;
+          
+          // Random size
+          const size = Math.random() * 3 + 2;
+          dot.style.width = `${size}px`;
+          dot.style.height = `${size}px`;
+          
+          // Random opacity
+          dot.style.opacity = Math.random() * 0.3;
+          
+          // Animation
+          const duration = 5 + Math.random() * 10;
+          dot.style.animation = `floating ${duration}s infinite alternate ease-in-out`;
+          dot.style.animationDelay = `${Math.random() * 5}s`;
+          
+          dotsContainer.appendChild(dot);
         }
-      `, styleSheet.cssRules.length);
+      }
+      
+      // Create dots for the global section
+      const globalDotsContainer = document.getElementById('globalDots');
+      if (globalDotsContainer) {
+        const dotCount = 30; // Reduced for better performance
+        
+        for (let i = 0; i < dotCount; i++) {
+          const dot = document.createElement('div');
+          dot.classList.add('dot');
+          
+          // Random positioning
+          const x = Math.random() * 100;
+          const y = Math.random() * 100;
+          dot.style.left = `${x}%`;
+          dot.style.top = `${y}%`;
+          
+          // Random size
+          const size = Math.random() * 3 + 2;
+          dot.style.width = `${size}px`;
+          dot.style.height = `${size}px`;
+          
+          // Random opacity
+          dot.style.opacity = Math.random() * 0.3;
+          
+          // Animation
+          const duration = 5 + Math.random() * 10;
+          dot.style.animation = `floating ${duration}s infinite alternate ease-in-out`;
+          dot.style.animationDelay = `${Math.random() * 5}s`;
+          
+          globalDotsContainer.appendChild(dot);
+        }
+      }
+      
+      // Create expertise background lines
+      const expertiseBg = document.getElementById('expertiseBg');
+      if (expertiseBg) {
+        const lineCount = 8; // Reduced for better performance
+        
+        for (let i = 0; i < lineCount; i++) {
+          const line = document.createElement('div');
+          line.classList.add('expertise-bg-line');
+          
+          // Positioning
+          const yPos = (i / lineCount) * 100;
+          line.style.top = `${yPos}%`;
+          
+          expertiseBg.appendChild(line);
+        }
+      }
       
       // Intersection Observer for animations
       const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .rotate-in');
@@ -724,7 +708,7 @@
         observer.observe(el);
       });
       
-      // 3D tilt effect for cards (simplified for performance)
+      // 3D tilt effect for cards
       const cards = document.querySelectorAll('.location-card');
       
       cards.forEach(card => {
@@ -749,7 +733,7 @@
         });
       });
       
-      // Simplified parallax effect for better performance
+      // Simplified parallax effect
       let lastScrollY = window.scrollY;
       let ticking = false;
       
@@ -773,34 +757,6 @@
         }
       });
     });
-    document.addEventListener('DOMContentLoaded', function() {
-      const animatedElements = document.querySelectorAll('.fade-in, .slide-in-right');
-      
-      const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const delay = el.dataset.delay || 0;
-            
-            setTimeout(() => {
-              el.classList.add('active');
-            }, delay * 1000);
-            
-            observer.unobserve(el);
-          }
-        });
-      }, observerOptions);
-      
-      animatedElements.forEach(el => {
-        observer.observe(el);
-      });
-    });
   </script>
-  <?php include 'includes/footer.php'; ?>
 </body>
 </html>
