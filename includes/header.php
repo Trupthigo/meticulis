@@ -72,28 +72,28 @@
             }
         });
         
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }
-        });
+    //     window.addEventListener('resize', () => {
+    //         if (window.innerWidth > 768) {
+    //             hamburger.classList.remove('active');
+    //             navMenu.classList.remove('active');
+    //         }
+    //     });
         
-        // Handle header transparency - only apply if hero section exists
-        if (heroSection) {
-            // Initially set the header as transparent if at the top of the page
-            if (window.scrollY < 100) {
-                header.classList.add('transparent');
-            }
+    //     // Handle header transparency - only apply if hero section exists
+    //     if (heroSection) {
+    //         // Initially set the header as transparent if at the top of the page
+    //         if (window.scrollY < 100) {
+    //             header.classList.add('transparent');
+    //         }
             
-            // Add scroll event listener
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    header.classList.remove('transparent');
-                } else {
-                    header.classList.add('transparent');
-                }
-            });
-        }
-    });
+    //         // Add scroll event listener
+    //         window.addEventListener('scroll', () => {
+    //             if (window.scrollY > 100) {
+    //                 header.classList.remove('transparent');
+    //             } else {
+    //                 header.classList.add('transparent');
+    //             }
+    //         });
+    //     }
+    // });
 </script>
