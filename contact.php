@@ -184,7 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <h3>Email Us</h3>
                                 <p>
                                     <a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">
-                                        admin@meticulis.co.uk
+                                        info@meticulis.co.uk
                                     </a>
                                 </p>
                             </div>

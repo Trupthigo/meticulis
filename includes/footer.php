@@ -31,7 +31,7 @@
                     <h3 class="footer-heading">Contact Us</h3>
                     <ul class="contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps?q=24+Austin+House,+King+Street,+Norwich,+NR1+1FW,+United+Kingdom" style="color: inherit; text-decoration: none;">24 Austin House, King Street, Norwich, NR1 1FW, United Kingdom</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">admin@meticulis.co.uk</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:admin@meticulis.co.uk" style="color: inherit; text-decoration: none;">info@meticulis.co.uk</a></li>
                     </ul>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/company/meticulis" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
