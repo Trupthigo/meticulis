@@ -488,7 +488,7 @@
   </script>
 
   <!-- Services and footer would be included here -->
-  <!-- <?php include 'stats.php'; ?> -->
+
   <?php include 'services.php'; ?>
   <?php include 'includes/footer.php'; ?>
 </body>
