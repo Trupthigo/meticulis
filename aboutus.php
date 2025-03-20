@@ -28,27 +28,59 @@
       font-family: 'Arial', sans-serif;
     }
     
+   /* Add these rules to your existing CSS */
+    /* Add these rules to your existing CSS, but with text color preserved */
     html, body {
-      background-color: var(--dark-bg);
-      color: var(--text);
-      overflow-x: hidden;
-      font-size: 16px;
-      line-height: 1.6;
-      max-width: 100%;
-    }
-    
-    .container {
-      max-width: 100%;
       overflow-x: hidden;
       width: 100%;
-    }
-    
-    /* Diagonal Sections */
-    .diagonal-section {
       position: relative;
-      padding: 100px 0;
-      margin-top: 60px;
+      margin: 0;
+      padding: 0;
+      color: var(--text); /* Preserve text color */
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Make sure diagonal sections don't create overflow */
+    .diagonal-section {
+      width: 100%;
       overflow: hidden;
+    }
+
+    /* Fix any potential absolute positioned elements */
+    .floating-dots,
+    .global-dots,
+    .expertise-bg {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Ensure text remains visible with proper contrast */
+    .diagonal-text,
+    .section-description,
+    .expertise-text,
+    .location-card p {
+      color: var(--text);
+      opacity: 1;
+    }
+
+    /* Make sure section titles are visible */
+    .section-title,
+    .expertise-title,
+    .location-title {
+      color: var(--text);
+    }
+
+    /* Maintain highlight color */
+    .section-title .highlight,
+    .expertise-title .highlight {
+      color: var(--gold);
     }
     
     .diagonal-bg {
@@ -82,7 +114,7 @@
       overflow: hidden;
       background: var(--dark-tertiary);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      animation: tilt 5s infinite alternate ease-in-out;
+      /* animation: tilt 5s infinite alternate ease-in-out; */
       object-fit: cover;
     }
     
