@@ -27,7 +27,7 @@
             </div>
             <div class="service-content">
             <h2 class="service-title">Skilled Technical Resources</h2>
-            <p class="service-description">Our experienced IT professionals seamlessly integrate with your team to enhance productivity and deliver exceptional solutions and results.</p>
+            <p class="service-description">Our experienced IT professionals seamlessly integrate with your team to enhance productivity, streamline operations, and deliver exceptional solutions and measurable results that drive business success.</p>
             <div class="service-features">
                 <div class="feature-item">
                 <i class="fas fa-check-circle feature-icon"></i>
