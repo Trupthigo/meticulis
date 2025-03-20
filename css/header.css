@@ -3,38 +3,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #121212;
-    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Header Styles */
 .header {
-    background-color: #000000;
-    padding: 20px 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
-    z-index: 100;
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #000000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
     font-size: 32px;
-    font-weight: 1000;
+    font-weight: 700;
     color: #ffffff;
     text-decoration: none;
     display: flex;
@@ -62,7 +64,7 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 1000;
+    font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
     padding-bottom: 5px;
@@ -73,7 +75,7 @@ body {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #ffd700;
+    background-color: #d4af37; /* Using the gold color from your theme */
     bottom: 0;
     left: 0;
     transition: width 0.3s ease;
@@ -81,6 +83,10 @@ body {
 
 .nav-menu a:hover::after {
     width: 100%;
+}
+
+.nav-menu a:hover {
+    color: #d4af37;
 }
 
 /* Hamburger Menu */
@@ -134,7 +140,7 @@ body {
         right: -100%;
         width: 250px;
         height: 100vh;
-        background-color: #1a1a1a;
+        background-color: #141414; /* Using the secondary background color */
         flex-direction: column;
         padding-top: 80px;
         transition: 0.3s ease;
@@ -158,15 +164,20 @@ body {
         width: 100%;
     }
 
-    .header {
-        padding: 15px 20px;
+    .logo {
+        font-size: 28px;
+    }
+    
+    .logo img {
+        height: 45px;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .logo {
         font-size: 24px;
     }
+    
     .logo img {
         height: 40px;
     }

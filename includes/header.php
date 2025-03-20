@@ -1,22 +1,6 @@
 <!-- header.php -->
 <link rel="stylesheet" href="../css/header.css">
 
-<style>
-    /* Header styles with transparency removed */
-    .header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        background-color: #000000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        height: 80px; /* Set a consistent height */
-        display: flex;
-        align-items: center;
-    }
-</style>
-
 <header class="header" id="main-header">
     <div class="container">
         <div class="nav-wrapper">
