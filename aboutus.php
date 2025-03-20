@@ -28,20 +28,20 @@
       font-family: 'Arial', sans-serif;
     }
     
-    body {
+    html, body {
       background-color: var(--dark-bg);
       color: var(--text);
       overflow-x: hidden;
       font-size: 16px;
       line-height: 1.6;
+      max-width: 100%;
     }
     
-    /* .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
+    .container {
+      max-width: 100%;
+      overflow-x: hidden;
       width: 100%;
-    } */
+    }
     
     /* Diagonal Sections */
     .diagonal-section {
