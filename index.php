@@ -27,11 +27,12 @@
 
     body {
       margin: 0;
-      font-family: 'Rajdhani', sans-serif;
+      /* font-family: 'Avenir Heavy'; */
     }
 
     h2 {
       line-height: 1.1;
+      font-family: 'Signika Bold'; 
     }
 
     /*--------------------------------------------------------------
@@ -189,7 +190,7 @@
 
     .hero-style .slide-text p {
       opacity: 0.8;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Avenir Heavy";
       font-size: 2rem;
       font-weight: 700;
       line-height: 1.25;
