@@ -419,7 +419,7 @@
         
         <!-- Example slide 3 -->
         <div class="swiper-slide">
-          <div class="slide-inner slide-bg-image" data-background="images/x.jpg">
+          <div class="slide-inner slide-bg-image" data-background="images/pro.jpg">
             <div class="container">
               <div data-swiper-parallax="300" class="slide-title">
                 <h2>METICULIS</h2>
