@@ -388,31 +388,31 @@
         "number" => 1,
         "title" => "Excellence",
         "text" => "Strive for excellence in everything we do, setting high standards and consistently delivering superior results..",
-        "image" => "excellence.webp"
+        "image" => "images/excellence.webp"
       ],
       [
         "number" => 2,
         "title" => "Innovation",
         "text" => "Embrace change and continuously seek new and better ways to solve problems and create value.",
-        "image" => "core.jpg"
+        "image" => "images/core.jpg"
       ],
       [
         "number" => 3,
         "title" => "Intigrity",
         "text" => "Conduct business with honesty, transparency, and ethical practices that foster trust and long-term relationships.",
-        "image" => "intigrity.webp"
+        "image" => "images/intigrity.webp"
       ],
       [
         "number" => 4,
         "title" => "Client Centricity",
         "text" => "We put our clients at the center of everything we do, focusing on their needs and exceeding their expectations.",
-        "image" => "globe.jpg"
+        "image" => "images/globe.jpg"
       ],
       [
         "number" => 5,
         "title" => "Sustainable Growth",
         "text" => "We pursue growth that benefits all stakeholders while contributing positively to society and the environment.",
-        "image" => "sustainable.webp"
+        "image" => "images/sustainable.webp"
       ],
     ];
 

@@ -10,7 +10,7 @@ $base_url = '/'; // Change this to your site's root directory path, e.g., '/meti
                 <div class="footer-column footer-about">
                     <div class="footer-logo">
                         <a href="index.php">
-                            <img src="logo.jpg" alt="Meticulis Logo">
+                            <img src="images/logo2.jpg" alt="Meticulis Logo">
                         </a>
                     </div>
                 </div>

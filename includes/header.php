@@ -5,7 +5,7 @@
     <div class="container">
         <div class="nav-wrapper">
             <a href="index.php" class="logo">
-                <img src="logo.jpg" alt="Meticulis">
+                <img src="images/logo.jpg" alt="Meticulis">
                 METICULIS
             </a>
             <div class="hamburger">

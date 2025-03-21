@@ -281,7 +281,7 @@
       </article>
 
       <figure class="meticulis-about__image" id="meticulis-scene">
-        <img src="main.webp" alt="Meticulis Team" />
+        <img src="images/main.webp" alt="Meticulis Team" />
       </figure>
     </div>
   </section>

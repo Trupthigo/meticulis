@@ -381,7 +381,7 @@
       <div class="swiper-wrapper">
         <!-- Example slide 1 -->
         <div class="swiper-slide">
-          <div class="slide-inner slide-bg-image" data-background="laptop.jpg">
+          <div class="slide-inner slide-bg-image" data-background="images/laptop.jpg">
             <div class="container">
               <div data-swiper-parallax="300" class="slide-title">
                 <h2>METICULIS</h2>
@@ -400,7 +400,7 @@
         
         <!-- Example slide 2 -->
         <div class="swiper-slide">
-          <div class="slide-inner slide-bg-image" data-background="job.jpg">
+          <div class="slide-inner slide-bg-image" data-background="images/job.jpg">
             <div class="container">
               <div data-swiper-parallax="300" class="slide-title">
                 <h2>METICULIS</h2>
@@ -419,7 +419,7 @@
         
         <!-- Example slide 3 -->
         <div class="swiper-slide">
-          <div class="slide-inner slide-bg-image" data-background="pro.jpg">
+          <div class="slide-inner slide-bg-image" data-background="images/pro.jpg">
             <div class="container">
               <div data-swiper-parallax="300" class="slide-title">
                 <h2>METICULIS</h2>

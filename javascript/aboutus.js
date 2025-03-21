@@ -1,5 +1,5 @@
-   // Create floating dots
-   document.addEventListener('DOMContentLoaded', function() {
+// Create floating dots
+document.addEventListener('DOMContentLoaded', function() {
     // Create dots for the values section
     const dotsContainer = document.getElementById('floatingDots');
     if (dotsContainer) {
