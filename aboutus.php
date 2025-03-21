@@ -28,13 +28,13 @@
       font-family: 'Arial', sans-serif;
     }
     
-    body {
+    html, body {
+      background-color: var(--dark-bg);
+      color: var(--text);
       overflow-x: hidden;
-      width: 100%;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      color: var(--text); /* Preserve text color */
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 100%;
     }
     
     .container {
