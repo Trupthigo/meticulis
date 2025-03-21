@@ -6,16 +6,6 @@
     overflow: hidden;
 }
 
-/* .footer-shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(90deg, transparent, #f5d742, transparent);
-    opacity: 0.4;
-} */
-
 .footer-top {
     padding: 70px 0 40px;
 }
@@ -30,6 +20,21 @@
 .footer-column {
     flex: 1;
     min-width: 250px;
+}
+
+/* Logo styling */
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    line-height: 1.7;
 }
 
 .footer-heading {
@@ -48,11 +53,6 @@
     width: 40px;
     height: 2px;
     background-color: #f5d742;
-}
-
-.footer-about p {
-    margin-bottom: 20px;
-    line-height: 1.7;
 }
 
 .social-links {
@@ -134,7 +134,7 @@
 .footer-bottom {
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #111; /* optional background */
+    background-color: #111;
 }
 
 .footer-bottom .container {
@@ -153,47 +153,6 @@
     flex: 1;
     text-align: right;
 }
-
-
-.footer-legal .rights ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.footer-legal .rights p {
-    margin: 0;
-}
-
-/* Mobile responsiveness */
-
-@media (max-width: 768px) {
-    .footer-bottom .container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .footer-bottom .copyright,
-    .footer-bottom .footer-legal {
-        text-align: center;
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-bottom .container {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .copyright, .footer-legal {
-        text-align: center;
-        flex: auto;
-        width: 100%;
-    }
-}
-
 
 .footer-legal a:hover {
     color: #f5d742;
@@ -244,25 +203,26 @@
         padding: 50px 0 30px;
     }
     
-    .footer-bottom {
+    .footer-bottom .container {
         flex-direction: column;
+        gap: 10px;
         text-align: center;
-        gap: 15px;
     }
     
-    .footer-legal {
-        justify-content: center;
-        flex-wrap: wrap;
+    .footer-bottom .copyright,
+    .footer-bottom .footer-legal {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
     }
 }
 
 @media (max-width: 576px) {
     .footer-column {
         min-width: 100%;
-    }
-    
-    .subscribe-form {
-        max-width: 100%;
     }
     
     .footer-content {
@@ -289,8 +249,7 @@
         font-size: 16px;
     }
     
-    .footer-legal {
-        flex-direction: column;
-        gap: 10px;
+    .footer-logo img {
+        max-width: 120px;
     }
 }
