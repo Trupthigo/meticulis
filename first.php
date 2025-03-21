@@ -2,20 +2,32 @@
 <style>
   @import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
 
+  /* Ensure no horizontal scrolling on any device */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
   .meticulis-about {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   .meticulis-about__heading {
     width: 100%;
-    height: 100%;
     position: relative;
     margin-top: 40px;
     padding: 0 40px;
     padding-bottom: 60px;
     background-image: linear-gradient(to bottom, #000000 0%, #121212 100%);
+    box-sizing: border-box;
+    overflow: hidden; /* Add overflow hidden here */
   }
 
   .meticulis-about__content {
@@ -26,6 +38,8 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .meticulis-about__text {
@@ -39,6 +53,7 @@
     backdrop-filter: blur(8px);
     animation: meticulis-text 0.8s 0.6s ease backwards;
     position: relative;
+    box-sizing: border-box;
   }
 
   .meticulis-about__text:before {
@@ -89,6 +104,7 @@
     font-size: 16px;
     line-height: 26px;
     color: #e0e0e0;
+    word-wrap: break-word;
   }
 
   .meticulis-about__image {
@@ -100,6 +116,8 @@
     transform: translateY(100px);
     overflow: hidden;
     animation: meticulis-image 0.6s 0.2s ease backwards;
+    /* Make sure image doesn't overflow container */
+    max-right: 100%;
   }
 
   @keyframes meticulis-image {
@@ -166,11 +184,33 @@
     color: #121212 !important;
   }
 
+  /* Fix for wider screens (laptop view) */
+  @media screen and (min-width: 1200px) {
+    .meticulis-about__content {
+      overflow: visible;
+      position: relative;
+    }
+    
+    .meticulis-about__image {
+      right: 0;
+      width: 60%;
+      max-width: 600px;
+    }
+  }
+
   /* Responsive styles */
+  @media screen and (max-width: 1199px) {
+    .meticulis-about__image {
+      width: 50%;
+      right: 0;
+    }
+  }
+
   @media screen and (max-width: 992px) {
     .meticulis-about__content {
       flex-direction: column;
       min-height: auto;
+      overflow: hidden;
     }
     
     .meticulis-about__text {
@@ -186,6 +226,7 @@
       height: 400px;
       transform: translateY(0);
       margin-top: 40px;
+      right: auto;
     }
   }
 
@@ -221,6 +262,10 @@
   }
 
   @media screen and (max-width: 480px) {
+    .meticulis-about__heading {
+      padding: 0 15px;
+    }
+    
     .meticulis-about__text {
       margin-top: 60px;
       padding: 15px;
