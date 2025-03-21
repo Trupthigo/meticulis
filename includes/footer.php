@@ -12,6 +12,7 @@ $base_url = '/'; // Change this to your site's root directory path, e.g., '/meti
                         <a href="index.php">
                             <img src="images/logo2.jpg" alt="Meticulis Logo">
                         </a>
+                        <p> With 20+ years of software development experience, we excel in building high-performing teams that deliver quality software.</p>
                     </div>
                 </div>
                 <div class="footer-column footer-links">

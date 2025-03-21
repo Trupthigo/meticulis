@@ -22,12 +22,12 @@
     min-width: 250px;
 }
 
-/* Logo styling */
-.footer-logo {
+/* Logo styling - Both header and footer */
+.footer-logo, .header-logo, .navbar-brand {
     margin-bottom: 20px;
 }
 
-.footer-logo img {
+.footer-logo img, .header-logo img, .navbar-brand img {
     max-width: 180px;
     height: auto;
     margin-bottom: 15px;
@@ -36,6 +36,14 @@
 
 .footer-logo p {
     line-height: 1.7;
+}
+
+/* Main content logo */
+.main-logo-container, .hero-section img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
 }
 
 .footer-heading {
@@ -159,6 +167,16 @@
     color: #f5d742;
 }
 
+/* Header specific adjustments */
+.navbar, .site-header {
+    padding: 15px 0;
+}
+
+.navbar-toggler, .menu-toggle {
+    border: none;
+    background: transparent;
+}
+
 /* Animation for footer elements */
 @keyframes fadeInUp {
     from {
@@ -197,6 +215,10 @@
     .footer-column {
         min-width: calc(50% - 30px);
     }
+    
+    .main-logo-container, .hero-section img {
+        max-width: 85%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -216,16 +238,33 @@
         width: 100%;
     }
     
-    .footer-logo {
+    .footer-logo, .header-logo, .navbar-brand {
         text-align: center; /* Center the logo container */
         margin-bottom: 25px; /* Increased space */
     }
     
-    .footer-logo img {
+    .footer-logo img, .header-logo img, .navbar-brand img {
         max-width: 150px;
         height: auto;
         display: block;
         margin: 0 auto 15px; /* Center the logo */
+    }
+    
+    /* Improved spacing for mobile layouts */
+    .container, .container-fluid {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .main-logo-container, .hero-section img {
+        max-width: 85%;
+        margin: 20px auto;
+    }
+    
+    /* Quick links and service sections need better spacing */
+    .quick-links, .our-services {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
@@ -239,17 +278,41 @@
     and (max-device-width: 896px) 
     and (-webkit-min-device-pixel-ratio: 2) {
     
-    .footer-logo {
+    .footer-logo, .header-logo, .navbar-brand {
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
     
-    .footer-logo img {
+    .footer-logo img, .header-logo img, .navbar-brand img {
         max-width: 160px; /* Better size for iPhone visibility */
         height: auto;
         display: block;
         margin: 0 auto 15px;
         object-fit: contain; /* Ensures image maintains aspect ratio */
+    }
+    
+    /* Ensure the large M logo is fully visible */
+    .main-logo-container, .hero-section img {
+        max-width: 85%; /* Percentage-based width to ensure it fits */
+        margin: 30px auto;
+        object-position: center;
+    }
+    
+    /* Fix padding for better spacing */
+    .container, .container-fluid {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    /* Improve spacing between sections */
+    .section, .quick-links, .our-services {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    /* Navigation button */
+    .navbar-toggler, .menu-toggle {
+        margin-right: 10px;
     }
 }
 
@@ -262,12 +325,18 @@
         gap: 40px;
     }
     
-    .footer-logo {
+    .footer-logo, .header-logo, .navbar-brand {
         text-align: center;
     }
     
-    .footer-logo img {
+    .footer-logo img, .header-logo img, .navbar-brand img {
         margin: 0 auto 15px;
+    }
+    
+    /* Better spacing for the main logo */
+    .main-logo-container, .hero-section img {
+        max-width: 85%;
+        margin: 25px auto;
     }
 }
 
@@ -290,10 +359,16 @@
         font-size: 16px;
     }
     
-    .footer-logo img {
-        max-width: 130px; /* Slightly larger than original */
+    .footer-logo img, .header-logo img, .navbar-brand img {
+        max-width: 140px; /* Slightly larger than original */
         height: auto;
         display: block;
         margin: 0 auto 10px;
+    }
+    
+    /* Adjust main logo for very small screens */
+    .main-logo-container, .hero-section img {
+        max-width: 90%;
+        margin: 20px auto;
     }
 }
