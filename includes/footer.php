@@ -1,19 +1,18 @@
 <?php
-// Base URL configuration - adjust as needed for your site structure
+// Add this to the top of your footer.php or include it in first.php
 $base_url = '/'; // Change this to your site's root directory path, e.g., '/meticulis/' if in a subdirectory
 ?>
+
 <link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yN1JZL3dOLpjU+vSkkW5L6kVeFjRMv1X0tIQSLk9pZ5QTVwIg3x/NjNzAGL4vqiwTgAhrzXh3Sp1ZCEx6hIb2w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <footer class="footer-section">
     <div class="footer-top">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column footer-about">
-                    <div class="footer-logo">
-                        <a href="index.php">
-                            <img src="images/logo2.jpg" alt="Meticulis Logo">
-                        </a>
-                        <p> With 20+ years of software development experience, we excel in building high-performing teams that deliver quality software.</p>
-                    </div>
+                    <h3 class="footer-heading">Meticulis</h3>
+                    <p>Our core values of quality, innovation, and dedication drive everything we do.</p>
                 </div>
                 <div class="footer-column footer-links">
                     <h3 class="footer-heading">Quick Links</h3>
@@ -60,3 +59,7 @@ $base_url = '/'; // Change this to your site's root directory path, e.g., '/meti
     </div>
     <div class="footer-shape"></div>
 </footer>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" integrity="sha512-qRCu9Fnw3zr4zvXP7BozM2ZsUZmEf/Nc3aBz7K5r1Z8Ndp2FZYhPSl9y1yQvTgICU5LKXz0I0Bv3J4FFv9Vg1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
