@@ -53,7 +53,7 @@ $base_url = '/'; // Change this to your site's root directory path, e.g., '/meti
                 <p>All Rights Reserved &copy; <?php echo date('Y'); ?> <a href="index.php">Meticulis.</a></p>
             </div>
             <div class="footer-legal">
-                <p>Developed and maintained by <a href="https://optimumsync.com/">OptimumSync.</a></p>
+                <!-- <p>Developed and maintained by <a href="https://optimumsync.com/">OptimumSync.</a></p> -->
             </div>
         </div>
     </div>
