@@ -10,7 +10,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet"> -->
 
 </head>
 <body>
